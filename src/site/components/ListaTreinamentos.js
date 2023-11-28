@@ -34,16 +34,16 @@ class ListaTreinamentos extends React.Component {
                     {/* Single Courses Start */}
                     <div className="single-courses">
                       <div className="courses-images">
-                        <a href="courses-details.html">
+                        <a href="/detalhe">
                           <img
-                            src="assets/images/courses/cipa.png"
+                            src="assets/images/BPF.jpeg"
                             alt="Courses"
                           />
                         </a>
                       </div>
                       <div className="courses-content">
                         <h4 className="title">
-                          <a href="courses-details.html">NR05 - CIPA</a>
+                          <a href="/detalhe">BPF - Alimentos</a>
                         </h4>
                         <div className="courses-meta">
                           <span>
@@ -52,164 +52,14 @@ class ListaTreinamentos extends React.Component {
                           </span>
                           <span>
                             {" "}
-                            <i className="icofont-read-book" /> 29 Palestras{" "}
+                            <i className="icofont-read-book" /> 455 alunos{" "}
                           </span>
                         </div>
                       </div>
                     </div>
                     {/* Single Courses End */}
                   </div>
-                  <div className="col-lg-4 col-md-6">
-                    {/* Single Courses Start */}
-                    <div className="single-courses">
-                      <div className="courses-images">
-                        <a href="courses-details.html">
-                          <img
-                            src="assets/images/courses/altura.jpeg"
-                            alt="Courses"
-                          />
-                        </a>
-                      </div>
-                      <div className="courses-content">
-                        <h4 className="title">
-                          <a href="courses-details.html">
-                            NR035 - Trabalho em Altura
-                          </a>
-                        </h4>
-                        <div className="courses-meta">
-                          <span>
-                            {" "}
-                            <i className="icofont-clock-time" /> 02 hr 15 mins
-                          </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 29 Palestras{" "}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Single Courses End */}
-                  </div>
-                  <div className="col-lg-4 col-md-6">
-                    {/* Single Courses Start */}
-                    <div className="single-courses">
-                      <div className="courses-images">
-                        <a href="courses-details.html">
-                          <img
-                            src="assets/images/courses/nr20.jpeg"
-                            alt="Courses"
-                          />
-                        </a>
-                      </div>
-                      <div className="courses-content">
-                        <h4 className="title">
-                          <a href="courses-details.html">NR20 - Básico</a>
-                        </h4>
-                        <div className="courses-meta">
-                          <span>
-                            {" "}
-                            <i className="icofont-clock-time" /> 02 hr 15 mins
-                          </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 29 Palestras{" "}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Single Courses End */}
-                  </div>
-                  <div className="col-lg-4 col-md-6">
-                    {/* Single Courses Start */}
-                    <div className="single-courses">
-                      <div className="courses-images">
-                        <a href="courses-details.html">
-                          <img
-                            src="assets/images/courses/nr10.jpeg"
-                            alt="Courses"
-                          />
-                        </a>
-                      </div>
-                      <div className="courses-content">
-                        <h4 className="title">
-                          <a href="courses-details.html">NR10 - Básico</a>
-                        </h4>
-                        <div className="courses-meta">
-                          <span>
-                            {" "}
-                            <i className="icofont-clock-time" /> 02 hr 15 mins
-                          </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 29 Palestras{" "}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Single Courses End */}
-                  </div>
-                  <div className="col-lg-4 col-md-6">
-                    {/* Single Courses Start */}
-                    <div className="single-courses">
-                      <div className="courses-images">
-                        <a href="courses-details.html">
-                          <img
-                            src="assets/images/courses/civil.png"
-                            alt="Courses"
-                          />
-                        </a>
-                      </div>
-                      <div className="courses-content">
-                        <h4 className="title">
-                          <a href="courses-details.html">
-                            NR18 - Contrução Civil
-                          </a>
-                        </h4>
-                        <div className="courses-meta">
-                          <span>
-                            {" "}
-                            <i className="icofont-clock-time" /> 02 hr 15 mins
-                          </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 29 Palestras{" "}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Single Courses End */}
-                  </div>
-                  <div className="col-lg-4 col-md-6">
-                    {/* Single Courses Start */}
-                    <div className="single-courses">
-                      <div className="courses-images">
-                        <a href="courses-details.html">
-                          <img
-                            src="assets/images/courses/nr13.png"
-                            alt="Courses"
-                          />
-                        </a>
-                      </div>
-                      <div className="courses-content">
-                        <h4 className="title">
-                          <a href="courses-details.html">
-                            NR13 - Operador de Caldeiras
-                          </a>
-                        </h4>
-                        <div className="courses-meta">
-                          <span>
-                            {" "}
-                            <i className="icofont-clock-time" /> 02 hr 15 mins
-                          </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 29 Palestras{" "}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Single Courses End */}
-                  </div>
+
                 </div>
               </div>
               {/* All Courses Wrapper End */}
@@ -217,11 +67,11 @@ class ListaTreinamentos extends React.Component {
           </div>
           {/* All Courses tab content End */}
           {/* All Courses BUtton Start */}
-          <div className="courses-btn text-center">
+          {/* <div className="courses-btn text-center">
             <a href="#" className="btn btn-secondary btn-hover-primary">
               + Mais Treinamentos
             </a>
-          </div>
+          </div> */}
           {/* All Courses BUtton End */}
         </div>
       </div>

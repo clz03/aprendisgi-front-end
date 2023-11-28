@@ -47,6 +47,7 @@ export default function Detalhe() {
 
       {/* About Start */}
       <div className="section">
+        <br></br><br></br>
         <div className="section-padding-02 mt-n0">
           <div className="container">
             {/* About Items Wrapper Start */}
@@ -60,28 +61,22 @@ export default function Detalhe() {
                         <i className="flaticon-tutor" />
                       </div>
                       <div className="item-title">
-                        <h3 className="title">Sobre o Treinamento</h3>
+                        <h3 className="title">BPF - Alimentos</h3>
                       </div>
                     </div>
                     <p>
-                      Somos uma equipe de especialistas com mais de 20 anos de
-                      experiência e atuamos em implementação e manutenção de
-                      sistemas de gestão integrados - Qualidade, Meio Ambiente,
-                      Saúde e Segurança do Trabalho, Segurança de Alimentos,
-                      Ética e Responsabilidade Social, ESG, Programa de
-                      Integridade. Atuamos em diversos segmentos da indústria e
-                      também no setor verejista e de serviços.{" "}
+                    As Boas Práticas de Fabricação (BPF), referem-se à um conjunto de práticas que asseguram as condições higiênico-sanitárias essenciais para a fabricação de alimentos, garantindo um ambiente seguro e adequado. 
                     </p>
                     <p>
-                      Desenvolvemos em empresas de todos os segmentos, projetos
-                      de Melhoria Contínua, com a aplicação da filosofia Kaizen
-                      e das ferramentas do Lean Manufacturing, possibiltando o
-                      aprimoramento da gestão, o alcance de resultados e o
-                      desenvolvimento de pessoas. Somos especialistas em
-                      certificações e homologação de produtos, embalagens para
-                      produtos perigosos, colchão, panelas e utensílios, escadas
-                      e purificadores de água.{" "}
+                    As boas práticas ou programas de pré-requisitos são imprescindíveis para dar sustentação ao conjunto das medidas de controle, quando falamos em Plano APPCC (análise de perigos e pontos críticos de controle).
+
+Para que não haja nenhuma confusão, é importante salientar que PPR e BPF são, basicamente, a mesma coisa, certo?
+
+Portanto, de acordo com a ISO 22000, a BPF (ou PPR) tem papel fundamental em fatores como controle de pragas, higiene e saúde dos colaboradores, higiene do ambiente, equipamentos, superfície de contato, etc. Em suma, o objetivo é garantir as condições higiênico-sanitárias dos estabelecimentos de produção, armazenagem e transporte dos alimentos.
+
+Bom, até aqui já é possível notar que estamos tratando de um assunto sério e práticas imprescindíveis na indústria alimentícia não é mesmo?
                     </p>
+                    <p>Clique no botao "Acessar" e faça seu login para iniciar o treinamento</p>
                   </div>
                   {/* About Item End */}
                 </div>
