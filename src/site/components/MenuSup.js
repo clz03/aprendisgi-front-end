@@ -6,7 +6,7 @@ class MenuSup extends React.Component {
         <>
         <div className="header-menu d-none d-lg-block">
                   <ul className="nav-menu">
-                    <li className="active">
+                    <li>
                       <a href="/">Home</a>
                     </li>
                     <li>

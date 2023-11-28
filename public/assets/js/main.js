@@ -81,7 +81,7 @@
 
         $( ".sub-menu" ).parent( "li" ).addClass( "menu-item-has-children" );
     }
-    menuScript();
+    //menuScript();
 
     /*--
         Magnific Popup Activation

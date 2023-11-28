@@ -6,7 +6,7 @@ import ComoFunciona from "../components/ComoFunciona";
 import BaixarApp from "../components/BaixarApp";
 import Footer from "../components/Footer";
 
-export default function Sobre() {
+export default function Detalhe() {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = (event) => {
@@ -60,7 +60,7 @@ export default function Sobre() {
                         <i className="flaticon-tutor" />
                       </div>
                       <div className="item-title">
-                        <h3 className="title">Sobre a Treinar SGI</h3>
+                        <h3 className="title">Sobre o Treinamento</h3>
                       </div>
                     </div>
                     <p>

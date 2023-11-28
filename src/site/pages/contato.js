@@ -47,7 +47,7 @@ class Sobre extends React.Component {
           <div className="mobile-top">
             <p>
               <i className="flaticon-phone-call" />{" "}
-              <a href="tel:9702621413">(970) 262-1413</a>
+              <a href="tel:9702621413">(11) 4591-3283</a>
             </p>
             <p>
               <i className="flaticon-email" />{" "}
@@ -216,7 +216,7 @@ class Sobre extends React.Component {
     {/* Contact Wrapper Start */}
     <div className="contact-wrapper">
       <div className="row align-items-center">
-        <div className="col-lg-6">
+        <div className="col-lg-12">
           {/* Contact Info Start */}
           <div className="contact-info">
             <img className="shape animation-round" src="assets/images/shape/shape-12.png" alt="Shape" />
@@ -226,8 +226,8 @@ class Sobre extends React.Component {
                 <i className="flaticon-phone-call" />
               </div>
               <div className="info-content">
-                <h6 className="title">Phone No.</h6>
-                <p><a href="tel:88193326867">(88) 193 326 867</a></p>
+                <h6 className="title">Telefone No.</h6>
+                <p><a href="tel:88193326867">(11) 4591-3283</a></p>
               </div>
             </div>
             {/* Single Contact Info End */}
@@ -237,62 +237,26 @@ class Sobre extends React.Component {
                 <i className="flaticon-email" />
               </div>
               <div className="info-content">
-                <h6 className="title">Email Address.</h6>
-                <p><a href="mailto:edule100@gmail.com">edule100@gmail.com</a></p>
+                <h6 className="title">E-mail</h6>
+                <p><a href="mailto:edule100@gmail.com">contato@treinarsgi.com.br</a></p>
               </div>
             </div>
             {/* Single Contact Info End */}
             {/* Single Contact Info Start */}
             <div className="single-contact-info">
               <div className="info-icon">
-                <i className="flaticon-pin" />
+                <i className="flaticon-WhatsApp" />
               </div>
               <div className="info-content">
-                <h6 className="title">Office Address.</h6>
-                <p>Talga, Alabama, USA</p>
+                <h6 className="title">WhatsApp</h6>
+                <p>(11) 97267-6151</p>
               </div>
             </div>
             {/* Single Contact Info End */}
           </div>
           {/* Contact Info End */}
         </div>
-        <div className="col-lg-6">
-          {/* Contact Form Start */}
-          <div className="contact-form">
-            <h3 className="title">Get in Touch <span>With Us</span></h3>
-            <div className="form-wrapper">
-              <form id="contact-form" action="https://htmlmail.hasthemes.com/humayun/edule-contact.php" method="POST">
-                {/* Single Form Start */}
-                <div className="single-form">
-                  <input type="text" name="name" placeholder="Name" />
-                </div>
-                {/* Single Form End */}
-                {/* Single Form Start */}
-                <div className="single-form">
-                  <input type="email" name="email" placeholder="Email" />
-                </div>
-                {/* Single Form End */}
-                {/* Single Form Start */}
-                <div className="single-form">
-                  <input type="text" name="subject" placeholder="Subject" />
-                </div>
-                {/* Single Form End */}
-                {/* Single Form Start */}
-                <div className="single-form">
-                  <textarea name="message" placeholder="Message" defaultValue={""} />
-                </div>
-                {/* Single Form End */}
-                <p className="form-message" />
-                {/* Single Form Start */}
-                <div className="single-form">
-                  <button className="btn btn-primary btn-hover-dark w-100">Send Message <i className="flaticon-right" /></button>
-                </div>
-                {/* Single Form End */}
-              </form>
-            </div>
-          </div>
-          {/* Contact Form End */}
-        </div>
+
       </div>
     </div>
     {/* Contact Wrapper End */}
