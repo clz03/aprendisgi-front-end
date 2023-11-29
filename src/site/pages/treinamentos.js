@@ -22,7 +22,7 @@ export default function Treinamentos() {
             <div className="header-main-wrapper">
               <div className="header-logo">
                 <a href="index.html">
-                  <img src="assets/images/logo-aprendisgi.png" alt="Logo" />
+                  <img src="assets/images/logo-treinarsgi2.png" alt="Logo" width={200} />
                 </a>
               </div>
 
@@ -45,7 +45,8 @@ export default function Treinamentos() {
       </div>
 
       <MenuMobile menu={isActive} />
-
+      <br></br><br></br>
+      <br></br><br></br>
       <ListaTreinamentos />
 
       <ComoFunciona />

@@ -18,20 +18,17 @@ class Footer extends React.Component {
                 <div className="footer-widget">
                   <div className="widget-logo">
                     <a href="#">
-                      <img src="assets/images/logo-wcqi.png" alt="Logo" />
+                      <img src="assets/images/logo-treinarsgi3.png" alt="Logo" />
                     </a>
                   </div>
-                  <div className="widget-address">
-                    <h4 className="footer-widget-title">WCQI Consultoria</h4>
-                    <p>Itupeva, SP.</p>
-                  </div>
+                  
                   <ul className="widget-info">
                     <li>
                       <p>
                         {" "}
                         <i className="flaticon-email" />{" "}
-                        <a href="mailto:address@gmail.com">
-                          contato@wcqi.com.br
+                        <a href="mailto:contato@treinarsgi.com.br">
+                          contato@treinarsgi.com.br
                         </a>{" "}
                       </p>
                     </li>
@@ -39,7 +36,7 @@ class Footer extends React.Component {
                       <p>
                         {" "}
                         <i className="flaticon-phone-call" />{" "}
-                        <a href="tel:9702621413">(11) 4567-1413</a>{" "}
+                        <a href="tel:1145671413">(11) 4567-1413</a>{" "}
                       </p>
                     </li>
                   </ul>

@@ -273,11 +273,7 @@
     /*--
 		Video Active
 	-----------------------------------*/
-    $('.video-playlist .link').on('click', function (event) {
-        $(this).siblings('.active').removeClass('active');
-        $(this).addClass('active');
-        event.preventDefault();
-    });
+
 
 
     /*--

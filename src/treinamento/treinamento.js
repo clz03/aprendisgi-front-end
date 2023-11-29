@@ -1,7 +1,24 @@
 import React from "react";
+import { useState } from "react";
+import YouTube from 'react-youtube';
 
-class Treinamento extends React.Component {
-  render() {
+export default function Treinamento() {
+  const [video, setVideo] = useState("RjKsC4CPJvQ");
+
+  const onVideoEnd = (event) => {
+    alert(video + " Acabou");
+  }
+
+  const opts = {
+    height: '100%',
+    width: '100%',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+      rel: 0,
+    }, 
+  };
+
     return (
       <div className="main-wrapper">
         {/* Login Header Start */}
@@ -11,7 +28,7 @@ class Treinamento extends React.Component {
             {/* Header Logo Start */}
             <div className="login-header-logo logo-2">
               <a href="/">
-                <img src="assets/images/logo-aprendisgi.png" alt="Logo" />
+                <img src="assets/images/logo-treinarsgi3.png" alt="Logo" width={150} />
               </a>
             </div>
             {/* Header Logo End */}
@@ -34,7 +51,7 @@ class Treinamento extends React.Component {
                     </a>
                   </li>
                   <li>
-                    <a className href="index.html">
+                    <a className href="/">
                       <i className="icofont-logout" /> Sair
                     </a>
                   </li>
@@ -53,30 +70,19 @@ class Treinamento extends React.Component {
             {/* Courses Video Player Start */}
             <div className="courses-video-player">
               {/* Courses Video Container Start */}
-              <div className="vidcontainer">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZFcoo0udMQY?si=WfK3uSjVXXd4firm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              {/* <div className="vidcontainer"> */}
+
+                <YouTube videoId={video} opts={opts} onEnd={onVideoEnd} className={"vidcontainer"} />
+              
               </div>
               {/* Courses Video Container End */}
-              {/* Courses Enroll Content Start */}
-              <div className="courses-enroll-content">
-                {/* Courses Enroll Title Start */}
-                <div className="courses-enroll-title">
-                  <h2 className="title">BPF - Alimentos</h2>
-                  <p>
-                    <i className="icofont-eye-alt" /> <span>8,350</span>{" "}
-                    visualizações
-                  </p>
-                </div>
-                {/* Courses Enroll Title End */}
-              </div>
-              {/* Courses Enroll Content End */}
-            </div>
+
+            {/* </div> */}
             {/* Courses Video Player End */}
             {/* Courses Video Playlist Start */}
             <div className="courses-video-playlist">
               <div className="playlist-title">
                 <h3 className="title">BPF - Alimentos</h3>
-                <span>2 Etapas (15m)</span>
               </div>
               {/* Video Playlist Start  */}
               <div className="video-playlist">
@@ -89,18 +95,19 @@ class Treinamento extends React.Component {
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseOne"
                     >
-                      <p>Etapa-01: Introdução ao tema</p>
+                      <p>1 - Introdução</p>
                       <span className="total-duration">4 minutos</span>
                     </button>
                     <div
                       id="collapseOne"
-                      className="accordion-collapse collapse"
+                      className="accordion-collapse"
                       data-bs-parent="#videoPlaylist"
                     >
                       <nav className="vids">
                         <a
                           className="link active"
                           href="#"
+                          onClick={() => setVideo("RjKsC4CPJvQ")}
                         >
                           <p>01. Video Introducao</p>
                           <span className="total-duration">04 minutos</span>
@@ -123,13 +130,14 @@ class Treinamento extends React.Component {
                     </button>
                     <div
                       id="collapseTwo"
-                      className="accordion-collapse collapse"
+                      className="accordion-collapse"
                       data-bs-parent="#videoPlaylist"
                     >
                       <nav className="vids">
                         <a
                           className="link"
                           href="#"
+                          onClick={() => setVideo("ZFcoo0udMQY")}
                         >
                           <p>01. Perigos com Alimentos</p>
                           <span className="total-duration">08 minutes</span>
@@ -148,14 +156,7 @@ class Treinamento extends React.Component {
           {/* Courses Enroll Wrapper End */}
         </div>
         {/* Courses Enroll End */}
-        {/*Back To Start*/}
-        <a href="#" className="back-to-top">
-          <i className="icofont-simple-up" />
-        </a>
-        {/*Back To End*/}
+       
       </div>
     );
-  }
 }
-
-export default Treinamento;

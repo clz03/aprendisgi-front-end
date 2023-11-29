@@ -17538,7 +17538,7 @@ img {
 
 .login-header-logo.logo-2 {
   margin-right: 50px;
-  padding: 35px 50px;
+  /* padding: 35px 50px; */
   background-color: #28313d;
 }
 
@@ -22751,7 +22751,7 @@ img {
 
 .courses-video-player {
   width: 71.8%;
-  padding-bottom: 80px;
+  
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {

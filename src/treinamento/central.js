@@ -11,7 +11,7 @@ class Treinamento extends React.Component {
             {/* Header Logo Start */}
             <div className="login-header-logo">
               <a href="index.html">
-                <img src="assets/images/logo-aprendisgi.PNG" alt="Logo" />
+                <img src="assets/images/logo-treinarsgi3.png" alt="Logo" width={200} />
               </a>
             </div>
             {/* Header Logo End */}
@@ -34,7 +34,7 @@ class Treinamento extends React.Component {
                     </a>
                   </li>
                   <li>
-                    <a className href="#">
+                    <a className href="/">
                       <i className="icofont-logout" /> Sair
                     </a>
                   </li>
@@ -88,6 +88,7 @@ class Treinamento extends React.Component {
                           <img
                             src="assets/images/BPF.jpeg"
                             alt="Courses"
+                            style={{width:280}}
                           />
                         </a>
                       </div>
@@ -110,10 +111,10 @@ class Treinamento extends React.Component {
                         </div>
                         <div className="content-box">
                           <p>Status</p>
-                          <span className="count">Em Progresso</span>
+                          <span className="count">Em Curso</span>
                         </div>
                         <div className="content-box">
-                          <p>Certificado</p>
+                          <p>Avaliação</p>
                           <span className="count">
                             4.5
                             <span className="rating-star">
