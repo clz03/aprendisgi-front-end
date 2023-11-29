@@ -1,6 +1,6 @@
 import React from "react";
 
-class Treinamento extends React.Component {
+class dashcliente extends React.Component {
   render() {
     return (
       <div className="main-wrapper main-wrapper-02">
@@ -151,4 +151,4 @@ class Treinamento extends React.Component {
   }
 }
 
-export default Treinamento;
+export default dashcliente;

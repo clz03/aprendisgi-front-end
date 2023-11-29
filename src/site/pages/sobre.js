@@ -46,7 +46,7 @@ export default function Sobre() {
       <MenuMobile menu={isActive} />
 
       <br></br><br></br>
-      <br></br><br></br>
+      <br></br><br></br><br></br>
 
       {/* About Start */}
       <div className="section">

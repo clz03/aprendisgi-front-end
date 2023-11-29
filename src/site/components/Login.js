@@ -40,7 +40,11 @@ class Login extends React.Component {
                       </div>
                 
                       <div className="single-form">
-                        <button className="btn btn-primary btn-hover-dark w-100"><a href="/dashboard">Entrar</a></button>
+                        <button className="btn btn-primary btn-hover-dark w-100"><a href="/dashcliente">Entrar</a></button>
+                      </div>
+
+                      <div className="single-form">
+                        <button className="btn btn-primary btn-hover-dark w-100"><a href="/dashadmin">Entrar Admin</a></button>
                       </div>
                 
                     </form>

@@ -45,6 +45,8 @@ export default function Detalhe() {
 
       <MenuMobile menu={isActive} />
 
+      <br></br><br></br><br></br>
+
       {/* About Start */}
       <div className="section">
         <br></br><br></br>
