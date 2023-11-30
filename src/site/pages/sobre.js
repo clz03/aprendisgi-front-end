@@ -45,12 +45,41 @@ export default function Sobre() {
 
       <MenuMobile menu={isActive} />
 
-      <br></br><br></br>
       <br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br>
+
+              {/* Call to Action Start */}
+              <div className="section section-padding-02">
+        <div className="container">
+          {/* Call to Action Wrapper Start */}
+          <div className="call-to-action-wrapper">
+            <img className="cat-shape-01 animation-round" src="assets/images/shape/shape-12.png" alt="Shape" />
+            <img className="cat-shape-02" src="assets/images/shape/shape-13.svg" alt="Shape" />
+            <img className="cat-shape-03 animation-round" src="assets/images/shape/shape-12.png" alt="Shape" />
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                {/* Section Title Start */}
+                <div className="section-title shape-02">
+                  <h5 className="sub-title">Conheça um pouco sobre nós</h5>
+                  <h2 className="main-title">Acesse ao lado para ver nossos <span>treinamentos</span></h2>
+                </div>
+                {/* Section Title End */}
+              </div>
+              <div className="col-md-6">
+                <div className="call-to-action-btn">
+                  <a className="btn btn-primary btn-hover-dark" href="/treinamentos">Treinamentos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Call to Action Wrapper End */}
+        </div>
+        </div>
+        {/* Call to Action End */}
 
       {/* About Start */}
       <div className="section">
-        <div className="section-padding-02 mt-n0">
+        <div className="section-padding-01">
           <div className="container">
             {/* About Items Wrapper Start */}
             <div className="about-items-wrapper">

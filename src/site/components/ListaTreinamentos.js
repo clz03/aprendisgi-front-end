@@ -3,7 +3,38 @@ import React from "react";
 class ListaTreinamentos extends React.Component {
     render() {
       return (
+<>
+        {/* Call to Action Start */}
         <div className="section section-padding-02">
+        <div className="container">
+          {/* Call to Action Wrapper Start */}
+          <div className="call-to-action-wrapper">
+            <img className="cat-shape-01 animation-round" src="assets/images/shape/shape-12.png" alt="Shape" />
+            <img className="cat-shape-02" src="assets/images/shape/shape-13.svg" alt="Shape" />
+            <img className="cat-shape-03 animation-round" src="assets/images/shape/shape-12.png" alt="Shape" />
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                {/* Section Title Start */}
+                <div className="section-title shape-02">
+                  <h5 className="sub-title">Conheça abaixo nossos treinamentos</h5>
+                  <h2 className="main-title">Acesse ao lado para iniciar seu <span>treinamento</span></h2>
+                </div>
+                {/* Section Title End */}
+              </div>
+              <div className="col-md-6">
+                <div className="call-to-action-btn">
+                  <a className="btn btn-primary btn-hover-dark" href="/login">Acessar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Call to Action Wrapper End */}
+        </div>
+        </div>
+        {/* Call to Action End */}
+
+
+        <div className="section section-padding-01">
         <div className="container">
           {/* All Courses Tabs Menu Start
           <div class="courses-tabs-menu courses-active">
@@ -75,6 +106,7 @@ class ListaTreinamentos extends React.Component {
           {/* All Courses BUtton End */}
         </div>
       </div>
+      </>
       );
     };
 };

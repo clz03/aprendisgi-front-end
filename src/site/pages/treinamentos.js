@@ -47,6 +47,8 @@ export default function Treinamentos() {
       <MenuMobile menu={isActive} />
       <br></br><br></br>
       <br></br><br></br>
+      <br></br><br></br><br></br>
+    
       <ListaTreinamentos />
 
       <ComoFunciona />

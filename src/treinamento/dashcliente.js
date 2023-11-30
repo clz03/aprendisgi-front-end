@@ -10,7 +10,7 @@ class dashcliente extends React.Component {
           <div className="login-header-wrapper navbar navbar-expand">
             {/* Header Logo Start */}
             <div className="login-header-logo">
-              <a href="index.html">
+              <a href="/">
                 <img src="assets/images/logo-treinarsgi3.png" alt="Logo" width={200} />
               </a>
             </div>
