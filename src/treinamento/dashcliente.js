@@ -51,7 +51,7 @@ class dashcliente extends React.Component {
           {/* Sidebar Wrapper Start */}
           <div className="sidebar-wrapper">
             <div className="menu-list">
-              <a className="active" href="/dashboard">
+              <a className="active" href="/dashcliente">
                 <img src="assets/images/menu-icon/icon-1.png" alt="Icon" />
               </a>
               {/* <a href="messages.html">
@@ -84,7 +84,7 @@ class dashcliente extends React.Component {
                     {/* Courses Item Start */}
                     <div className="courses-item">
                       <div className="item-thumb">
-                        <a href="/treinamento">
+                        <a href="/treinamentoBPF">
                           <img
                             src="assets/images/BPF.jpeg"
                             alt="Courses"
@@ -94,26 +94,26 @@ class dashcliente extends React.Component {
                       </div>
                       <div className="content-title">
                         <div className="meta">
-                          <a href="/treinamento" className="action">
+                          <a href="/treinamentoBPF" className="action">
                             Treinamento Online
                           </a>
                         </div>
                         <h3 className="title">
-                          <a href="/treinamento">
+                          <a href="/treinamentoBPF">
                             BPF - Alimentos
                           </a>
                         </h3>
                       </div>
                       <div className="content-wrapper">
-                        <div className="content-box">
+                        {/* <div className="content-box">
                           <p>Progreso</p>
                           <span className="count">20%</span>
-                        </div>
+                        </div> */}
                         <div className="content-box">
                           <p>Status</p>
-                          <span className="count">Em Curso</span>
+                          <span className="count">Ativo</span>
                         </div>
-                        <div className="content-box">
+                        {/* <div className="content-box">
                           <p>Avaliação</p>
                           <span className="count">
                             4.5
@@ -124,11 +124,56 @@ class dashcliente extends React.Component {
                               />
                             </span>
                           </span>
-                        </div>
+                        </div> */}
                         
                       </div>
                     </div>
-
+                    <div className="courses-item">
+                      <div className="item-thumb">
+                        <a href="/treinamentoManipulador">
+                          <img
+                            src="assets/images/BPFManipulador.jpeg"
+                            alt="Courses"
+                            style={{width:280}}
+                          />
+                        </a>
+                      </div>
+                      <div className="content-title">
+                        <div className="meta">
+                          <a href="/treinamentoManipulador" className="action">
+                            Treinamento Online
+                          </a>
+                        </div>
+                        <h3 className="title">
+                          <a href="/treinamentoManipulador">
+                            BPF - Manipulador
+                          </a>
+                        </h3>
+                      </div>
+                      <div className="content-wrapper">
+                        {/* <div className="content-box">
+                          <p>Progreso</p>
+                          <span className="count">20%</span>
+                        </div> */}
+                        <div className="content-box">
+                          <p>Status</p>
+                          <span className="count">Ativo</span>
+                        </div>
+                        {/* <div className="content-box">
+                          <p>Avaliação</p>
+                          <span className="count">
+                            4.5
+                            <span className="rating-star">
+                              <span
+                                className="rating-bar"
+                                style={{ width: "80%" }}
+                              />
+                            </span>
+                          </span>
+                        </div> */}
+                        
+                      </div>
+                    </div>
                   </div>
 
                 </div>

@@ -27,7 +27,7 @@ export default function Treinamento() {
           <div className="login-header-wrapper navbar navbar-expand">
             {/* Header Logo Start */}
             <div className="login-header-logo logo-2">
-              <a href="/">
+              <a href="/dashcliente">
                 <img src="assets/images/logo-treinarsgi3.png" alt="Logo" width={150} />
               </a>
             </div>
@@ -146,7 +146,7 @@ export default function Treinamento() {
                       </nav>
                     </div>
                   </div>
-
+                  <a style={{float: 'right', paddingTop:30, paddingRight:30}} href="/dashcliente">Voltar</a>
                 </div>
               </div>
               {/* Video Playlist End  */}

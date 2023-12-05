@@ -17514,7 +17514,7 @@ img {
 /*  3.4 - Login Header CSS
 /*----------------------------------------*/
 .login-header {
-  background-color: #212832;
+  background-color: #9f9f9f;
 }
 
 .login-header-wrapper.navbar {
@@ -17523,7 +17523,7 @@ img {
 
 .login-header-logo {
   padding: 25px 25px;
-  background-color: #28313d;
+  background-color: #b9b9b9;
 }
 
 .login-header-logo a + a {
@@ -17539,7 +17539,7 @@ img {
 .login-header-logo.logo-2 {
   margin-right: 50px;
   /* padding: 35px 50px; */
-  background-color: #28313d;
+  background-color: #b9b9b9;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {

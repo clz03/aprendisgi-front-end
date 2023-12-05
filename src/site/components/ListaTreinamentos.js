@@ -65,7 +65,7 @@ class ListaTreinamentos extends React.Component {
                     {/* Single Courses Start */}
                     <div className="single-courses">
                       <div className="courses-images">
-                        <a href="/detalhe">
+                        <a href="/login">
                           <img
                             src="assets/images/BPF.jpeg"
                             alt="Courses"
@@ -74,7 +74,7 @@ class ListaTreinamentos extends React.Component {
                       </div>
                       <div className="courses-content">
                         <h4 className="title">
-                          <a href="/detalhe">BPF - Alimentos</a>
+                          <a href="/login">BPF - Alimentos</a>
                         </h4>
                         <div className="courses-meta">
                           <span>
@@ -90,7 +90,35 @@ class ListaTreinamentos extends React.Component {
                     </div>
                     {/* Single Courses End */}
                   </div>
-
+                  <div className="col-lg-4 col-md-6">
+                    {/* Single Courses Start */}
+                    <div className="single-courses">
+                      <div className="courses-images">
+                        <a href="/login">
+                          <img
+                            src="assets/images/BPFManipulador.jpeg"
+                            alt="Courses"
+                          />
+                        </a>
+                      </div>
+                      <div className="courses-content">
+                        <h4 className="title">
+                          <a href="/login">BPF - Manipulador</a>
+                        </h4>
+                        <div className="courses-meta">
+                          <span>
+                            {" "}
+                            <i className="icofont-clock-time" /> 24 mins
+                          </span>
+                          <span>
+                            {" "}
+                            <i className="icofont-read-book" /> 300 alunos{" "}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Single Courses End */}
+                  </div>
                 </div>
               </div>
               {/* All Courses Wrapper End */}
