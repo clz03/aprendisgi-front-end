@@ -119,6 +119,94 @@ class ListaTreinamentos extends React.Component {
                     </div>
                     {/* Single Courses End */}
                   </div>
+
+                  {/* Single Courses Start */}
+                  <div className="col-lg-4 col-md-6">
+                  <div className="single-courses">
+                      <div className="courses-images">
+                        <a href="/login">
+                          <img
+                            src="assets/images/HACCP.png"
+                            alt="Courses"
+                          />
+                        </a>
+                      </div>
+                      <div className="courses-content">
+                        <h4 className="title">
+                          <a href="/login">HACCP</a>
+                        </h4>
+                        <div className="courses-meta">
+                          <span>
+                            {" "}
+                            <i className="icofont-clock-time" /> 44 mins
+                          </span>
+                          <span>
+                            {" "}
+                            <i className="icofont-read-book" /> 325 alunos{" "}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    {/* Single Courses End */}
+                     {/* Single Courses Start */}
+                  <div className="col-lg-4 col-md-6">
+                  <div className="single-courses">
+                      <div className="courses-images">
+                        <a href="/login">
+                          <img
+                            src="assets/images/nr06.png"
+                            alt="Courses"
+                          />
+                        </a>
+                      </div>
+                      <div className="courses-content">
+                        <h4 className="title">
+                          <a href="/login">NR 06 EPI</a>
+                        </h4>
+                        <div className="courses-meta">
+                          <span>
+                            {" "}
+                            <i className="icofont-clock-time" /> 44 mins
+                          </span>
+                          <span>
+                            {" "}
+                            <i className="icofont-read-book" /> 325 alunos{" "}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    {/* Single Courses End */}
+                     {/* Single Courses Start */}
+                  <div className="col-lg-4 col-md-6">
+                  <div className="single-courses">
+                      <div className="courses-images">
+                        <a href="/login">
+                          <img
+                            src="assets/images/brigada.jpg"
+                            alt="Courses"
+                          />
+                        </a>
+                      </div>
+                      <div className="courses-content">
+                        <h4 className="title">
+                          <a href="/login">Brigada de Incêndio</a>
+                        </h4>
+                        <div className="courses-meta">
+                          <span>
+                            {" "}
+                            <i className="icofont-clock-time" /> 44 mins
+                          </span>
+                          <span>
+                            {" "}
+                            <i className="icofont-read-book" /> 325 alunos{" "}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    {/* Single Courses End */}
                 </div>
               </div>
               {/* All Courses Wrapper End */}

@@ -128,6 +128,7 @@ class dashcliente extends React.Component {
                         
                       </div>
                     </div>
+                    {/* Item Start */}
                     <div className="courses-item">
                       <div className="item-thumb">
                         <a href="/treinamentoManipulador">
@@ -174,6 +175,151 @@ class dashcliente extends React.Component {
                         
                       </div>
                     </div>
+                    {/* Item End */}
+                    {/* Item Start */}
+                    <div className="courses-item">
+                      <div className="item-thumb">
+                        <a href="/treinamentoHACCP">
+                          <img
+                            src="assets/images/HACCP.png"
+                            alt="Courses"
+                            style={{width:280}}
+                          />
+                        </a>
+                      </div>
+                      <div className="content-title">
+                        <div className="meta">
+                          <a href="/treinamentoHACCP" className="action">
+                            Treinamento Online
+                          </a>
+                        </div>
+                        <h3 className="title">
+                          <a href="/treinamentoHACCP">
+                            HACCP
+                          </a>
+                        </h3>
+                      </div>
+                      <div className="content-wrapper">
+                        {/* <div className="content-box">
+                          <p>Progreso</p>
+                          <span className="count">20%</span>
+                        </div> */}
+                        <div className="content-box">
+                          <p>Status</p>
+                          <span className="count">Ativo</span>
+                        </div>
+                        {/* <div className="content-box">
+                          <p>Avaliação</p>
+                          <span className="count">
+                            4.5
+                            <span className="rating-star">
+                              <span
+                                className="rating-bar"
+                                style={{ width: "80%" }}
+                              />
+                            </span>
+                          </span>
+                        </div> */}
+                        
+                      </div>
+                    </div>
+                    {/* Item End */}
+                      {/* Item Start */}
+                      <div className="courses-item">
+                      <div className="item-thumb">
+                        <a href="/treinamentoNR06">
+                          <img
+                            src="assets/images/NR06.png"
+                            alt="Courses"
+                            style={{width:280}}
+                          />
+                        </a>
+                      </div>
+                      <div className="content-title">
+                        <div className="meta">
+                          <a href="/treinamentoNR06" className="action">
+                            Treinamento Online
+                          </a>
+                        </div>
+                        <h3 className="title">
+                          <a href="/treinamentoNR06">
+                            NR06
+                          </a>
+                        </h3>
+                      </div>
+                      <div className="content-wrapper">
+                        {/* <div className="content-box">
+                          <p>Progreso</p>
+                          <span className="count">20%</span>
+                        </div> */}
+                        <div className="content-box">
+                          <p>Status</p>
+                          <span className="count">Ativo</span>
+                        </div>
+                        {/* <div className="content-box">
+                          <p>Avaliação</p>
+                          <span className="count">
+                            4.5
+                            <span className="rating-star">
+                              <span
+                                className="rating-bar"
+                                style={{ width: "80%" }}
+                              />
+                            </span>
+                          </span>
+                        </div> */}
+                        
+                      </div>
+                    </div>
+                    {/* Item End */}
+                      {/* Item Start */}
+                      <div className="courses-item">
+                      <div className="item-thumb">
+                        <a href="/treinamentoBrigada">
+                          <img
+                            src="assets/images/Brigada.jpg"
+                            alt="Courses"
+                            style={{width:280}}
+                          />
+                        </a>
+                      </div>
+                      <div className="content-title">
+                        <div className="meta">
+                          <a href="/treinamentoBrigada" className="action">
+                            Treinamento Online
+                          </a>
+                        </div>
+                        <h3 className="title">
+                          <a href="/treinamentoBrigada">
+                            Brigada de Incêndio
+                          </a>
+                        </h3>
+                      </div>
+                      <div className="content-wrapper">
+                        {/* <div className="content-box">
+                          <p>Progreso</p>
+                          <span className="count">20%</span>
+                        </div> */}
+                        <div className="content-box">
+                          <p>Status</p>
+                          <span className="count">Ativo</span>
+                        </div>
+                        {/* <div className="content-box">
+                          <p>Avaliação</p>
+                          <span className="count">
+                            4.5
+                            <span className="rating-star">
+                              <span
+                                className="rating-bar"
+                                style={{ width: "80%" }}
+                              />
+                            </span>
+                          </span>
+                        </div> */}
+                        
+                      </div>
+                    </div>
+                    {/* Item End */}
                   </div>
 
                 </div>
