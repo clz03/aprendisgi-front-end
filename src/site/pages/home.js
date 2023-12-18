@@ -49,8 +49,8 @@ export default function Home() {
           <div className="slider-content">
             <h4 className="sub-title">Ambiente virtual de aprendizagem</h4>
             <h2 className="main-title">
-              A sua empresa com escola de treinamento e desenvolvimento &nbsp;
-              <span>24 hrs</span>
+              Treinamentos e desenvolvimento online no melhor dia e horário para os seus&nbsp;
+              <span>colaboradores</span>
             </h2>
             {/* <p>It has survived not only five centuries but also the leap into electronic typesetting.</p> */}
             {/* <a class="btn btn-primary btn-hover-dark" href="#">Start A Course</a> */}

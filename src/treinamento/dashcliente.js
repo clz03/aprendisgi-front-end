@@ -1,19 +1,57 @@
-import React from "react";
+import React, {useState, useEffect } from 'react'
+import api from ".././services/api";
+import carregando from ".././assets/loading.gif";
 
-class dashcliente extends React.Component {
-  render() {
+  export default function Dashcliente() {
+
+    const [treinamentos, setTreinamentos] = useState([]);
+    const [loading, setLoading] = useState("");
+    const userid = localStorage.getItem('sgiuserid');
+
+    async function loadTreinamentos() {
+      setLoading(true);
+      const query = '/treinamentos/usuarios/' + userid;
+      const response = await api.get(query);
+      const data = await response.data;
+      const treinamentos = data[0].idtreinamentos
+      
+      //usar variavel treinamentos para buscar treinamentos e listar
+
+      const query2 = '/treinamentos/produto/idlist';
+      const response2 = await api.post(query2,treinamentos);
+      const data2 = await response2.data;
+      setTreinamentos(data2);
+      setLoading(false);
+    };
+
+    useEffect(() => {
+      if(userid === null)
+        window.location.href = "/login"; 
+      loadTreinamentos();
+    }, []);
+   
+    function handleLogout(event) {
+      event.preventDefault();
+      localStorage.clear();
+      window.location.href = "/login";
+    };
+
     return (
       <div className="main-wrapper main-wrapper-02">
+        {/* {userid && */}
+        <>
         {/* Login Header Start */}
         <div className="section login-header">
           {/* Login Header Wrapper Start */}
           <div className="login-header-wrapper navbar navbar-expand">
             {/* Header Logo Start */}
+            
             <div className="login-header-logo">
               <a href="/">
                 <img src="assets/images/logo-treinarsgi3.png" alt="Logo" width={200} />
               </a>
             </div>
+            
             {/* Header Logo End */}
            
             {/* Header Action Start */}
@@ -34,7 +72,7 @@ class dashcliente extends React.Component {
                     </a>
                   </li>
                   <li>
-                    <a className href="/">
+                    <a className href="#" onClick={handleLogout}>
                       <i className="icofont-logout" /> Sair
                     </a>
                   </li>
@@ -70,276 +108,99 @@ class dashcliente extends React.Component {
           </div>
           {/* Sidebar Wrapper End */}
           {/* Page Content Wrapper Start */}
+          
           <div className="page-content-wrapper">
+            {loading && 
+                <div style={{ alignItems:'center', textAlign: 'center' }}>
+                    <img src={carregando} width="80"></img>
+                </div>
+            }
             <div className="container-fluid custom-container">
-                          {/* Admin Courses Tab Start */}
               <div className="admin-courses-tab">
                 <h3 className="title">Seus Treinamentos</h3>
               </div>
               {/* Admin Courses Tab End */}
               {/* Admin Courses Tab Content Start */}
-              <div className="admin-courses-tab-content">
-                <div className="tab-content">
-                  <div className="tab-pane fade show active" id="tab1">
-                    {/* Courses Item Start */}
-                    <div className="courses-item">
-                      <div className="item-thumb">
-                        <a href="/treinamentoBPF">
-                          <img
-                            src="assets/images/BPF.jpeg"
-                            alt="Courses"
-                            style={{width:280}}
-                          />
-                        </a>
-                      </div>
-                      <div className="content-title">
-                        <div className="meta">
-                          <a href="/treinamentoBPF" className="action">
-                            Treinamento Online
-                          </a>
-                        </div>
-                        <h3 className="title">
-                          <a href="/treinamentoBPF">
-                            BPF - Alimentos
-                          </a>
-                        </h3>
-                      </div>
-                      <div className="content-wrapper">
-                        {/* <div className="content-box">
-                          <p>Progreso</p>
-                          <span className="count">20%</span>
-                        </div> */}
-                        <div className="content-box">
-                          <p>Status</p>
-                          <span className="count">Ativo</span>
-                        </div>
-                        {/* <div className="content-box">
-                          <p>Avaliação</p>
-                          <span className="count">
-                            4.5
-                            <span className="rating-star">
-                              <span
-                                className="rating-bar"
-                                style={{ width: "80%" }}
-                              />
-                            </span>
-                          </span>
-                        </div> */}
-                        
-                      </div>
-                    </div>
-                    {/* Item Start */}
-                    <div className="courses-item">
-                      <div className="item-thumb">
-                        <a href="/treinamentoManipulador">
-                          <img
-                            src="assets/images/BPFManipulador.jpeg"
-                            alt="Courses"
-                            style={{width:280}}
-                          />
-                        </a>
-                      </div>
-                      <div className="content-title">
-                        <div className="meta">
-                          <a href="/treinamentoManipulador" className="action">
-                            Treinamento Online
-                          </a>
-                        </div>
-                        <h3 className="title">
-                          <a href="/treinamentoManipulador">
-                            BPF - Manipulador
-                          </a>
-                        </h3>
-                      </div>
-                      <div className="content-wrapper">
-                        {/* <div className="content-box">
-                          <p>Progreso</p>
-                          <span className="count">20%</span>
-                        </div> */}
-                        <div className="content-box">
-                          <p>Status</p>
-                          <span className="count">Ativo</span>
-                        </div>
-                        {/* <div className="content-box">
-                          <p>Avaliação</p>
-                          <span className="count">
-                            4.5
-                            <span className="rating-star">
-                              <span
-                                className="rating-bar"
-                                style={{ width: "80%" }}
-                              />
-                            </span>
-                          </span>
-                        </div> */}
-                        
-                      </div>
-                    </div>
-                    {/* Item End */}
-                    {/* Item Start */}
-                    <div className="courses-item">
-                      <div className="item-thumb">
-                        <a href="/treinamentoHACCP">
-                          <img
-                            src="assets/images/HACCP.png"
-                            alt="Courses"
-                            style={{width:280}}
-                          />
-                        </a>
-                      </div>
-                      <div className="content-title">
-                        <div className="meta">
-                          <a href="/treinamentoHACCP" className="action">
-                            Treinamento Online
-                          </a>
-                        </div>
-                        <h3 className="title">
-                          <a href="/treinamentoHACCP">
-                            HACCP
-                          </a>
-                        </h3>
-                      </div>
-                      <div className="content-wrapper">
-                        {/* <div className="content-box">
-                          <p>Progreso</p>
-                          <span className="count">20%</span>
-                        </div> */}
-                        <div className="content-box">
-                          <p>Status</p>
-                          <span className="count">Ativo</span>
-                        </div>
-                        {/* <div className="content-box">
-                          <p>Avaliação</p>
-                          <span className="count">
-                            4.5
-                            <span className="rating-star">
-                              <span
-                                className="rating-bar"
-                                style={{ width: "80%" }}
-                              />
-                            </span>
-                          </span>
-                        </div> */}
-                        
-                      </div>
-                    </div>
-                    {/* Item End */}
-                      {/* Item Start */}
-                      <div className="courses-item">
-                      <div className="item-thumb">
-                        <a href="/treinamentoNR06">
-                          <img
-                            src="assets/images/NR06.png"
-                            alt="Courses"
-                            style={{width:280}}
-                          />
-                        </a>
-                      </div>
-                      <div className="content-title">
-                        <div className="meta">
-                          <a href="/treinamentoNR06" className="action">
-                            Treinamento Online
-                          </a>
-                        </div>
-                        <h3 className="title">
-                          <a href="/treinamentoNR06">
-                            NR06
-                          </a>
-                        </h3>
-                      </div>
-                      <div className="content-wrapper">
-                        {/* <div className="content-box">
-                          <p>Progreso</p>
-                          <span className="count">20%</span>
-                        </div> */}
-                        <div className="content-box">
-                          <p>Status</p>
-                          <span className="count">Ativo</span>
-                        </div>
-                        {/* <div className="content-box">
-                          <p>Avaliação</p>
-                          <span className="count">
-                            4.5
-                            <span className="rating-star">
-                              <span
-                                className="rating-bar"
-                                style={{ width: "80%" }}
-                              />
-                            </span>
-                          </span>
-                        </div> */}
-                        
-                      </div>
-                    </div>
-                    {/* Item End */}
-                      {/* Item Start */}
-                      <div className="courses-item">
-                      <div className="item-thumb">
-                        <a href="/treinamentoBrigada">
-                          <img
-                            src="assets/images/Brigada.jpg"
-                            alt="Courses"
-                            style={{width:280}}
-                          />
-                        </a>
-                      </div>
-                      <div className="content-title">
-                        <div className="meta">
-                          <a href="/treinamentoBrigada" className="action">
-                            Treinamento Online
-                          </a>
-                        </div>
-                        <h3 className="title">
-                          <a href="/treinamentoBrigada">
-                            Brigada de Incêndio
-                          </a>
-                        </h3>
-                      </div>
-                      <div className="content-wrapper">
-                        {/* <div className="content-box">
-                          <p>Progreso</p>
-                          <span className="count">20%</span>
-                        </div> */}
-                        <div className="content-box">
-                          <p>Status</p>
-                          <span className="count">Ativo</span>
-                        </div>
-                        {/* <div className="content-box">
-                          <p>Avaliação</p>
-                          <span className="count">
-                            4.5
-                            <span className="rating-star">
-                              <span
-                                className="rating-bar"
-                                style={{ width: "80%" }}
-                              />
-                            </span>
-                          </span>
-                        </div> */}
-                        
-                      </div>
-                    </div>
-                    {/* Item End */}
-                  </div>
+              
+                <div className="admin-courses-tab-content">
+                  <div className="tab-content">
+                    <div className="tab-pane fade show active" id="tab1">
+                      {/* Courses Item Start */}
 
+                      {/* Item Start */}
+                      {treinamentos.map(item => (
+                        <div className="courses-item">
+                        <div className="item-thumb">
+                          <a href="/treinamentoManipulador">
+                            <img
+                              src="assets/images/BPFManipulador.jpeg"
+                              alt="Courses"
+                              style={{width:280}}
+                            />
+                          </a>
+                        </div>
+                        <div className="content-title">
+                          <div className="meta">
+                            <a href="/treinamentoManipulador" className="action">
+                              Treinamento Online
+                            </a>
+                          </div>
+                          <h3 className="title">
+                            <a href="/treinamentoManipulador">
+                              {item.titulo}
+                            </a>
+                          </h3>
+                        </div>
+                        <div className="content-wrapper">
+                          {/* <div className="content-box">
+                            <p>Progreso</p>
+                            <span className="count">20%</span>
+                          </div> */}
+                          <div className="content-box">
+                            <p>Status</p>
+                            <span className="count">Ativo</span>
+                          </div>
+                          {/* <div className="content-box">
+                            <p>Avaliação</p>
+                            <span className="count">
+                              4.5
+                              <span className="rating-star">
+                                <span
+                                  className="rating-bar"
+                                  style={{ width: "80%" }}
+                                />
+                              </span>
+                            </span>
+                          </div> */}
+                          
+                        </div>
+                      </div>
+                      ))}
+
+                      {/* Item End */}
+                      
+                    </div>
+
+                  </div>
                 </div>
-              </div>
+             
               {/* Admin Courses Tab Content End */}
 
             </div>
           </div>
+           
           {/* Page Content Wrapper End */}
         </div>
         {/* Courses Admin End */}
+        
 
         {/*Back To Start*/}
         <a href="#" className="back-to-top">
           <i className="icofont-simple-up" />
         </a>
         {/*Back To End*/}
+        </>
+      {/* } */}
       </div>
     );
   }
-}
-
-export default dashcliente;
