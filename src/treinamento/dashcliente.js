@@ -5,9 +5,21 @@ import carregando from ".././assets/loading.gif";
   export default function Dashcliente() {
 
     const [treinamentos, setTreinamentos] = useState([]);
+    const [progresso, setProgresso] = useState("0");
     const [loading, setLoading] = useState("");
     const [usernome, setUsernome] = useState(localStorage.getItem('sgiusernome'));
     const userid = localStorage.getItem('sgiuserid');
+
+    async function loadProgresso() {
+      setLoading(true);
+      const query = '/treinamentos/progresso/usuario/' + userid;
+      const response = await api.get(query);
+      const data = await response.data;
+      if(data[0]?.progresso){
+        setProgresso(data[0].progresso);
+      }
+      setLoading(false);
+    };
 
     async function loadTreinamentos() {
       setLoading(true);
@@ -28,7 +40,8 @@ import carregando from ".././assets/loading.gif";
     useEffect(() => {
       if(userid === null)
         window.location.href = "/login"; 
-      loadTreinamentos();
+        loadProgresso();
+        loadTreinamentos();
     }, []);
    
     function handleLogout(event) {
@@ -155,8 +168,8 @@ import carregando from ".././assets/loading.gif";
                         </div>
                         <div className="content-wrapper">
                           <div className="content-box">
-                            <p>Progreso</p>
-                            <span className="count">20%</span>
+                            <p>Progresso</p>
+                            <span className="count">{progresso}%</span>
                           </div>
                           <div className="content-box">
                             <p>Status</p>

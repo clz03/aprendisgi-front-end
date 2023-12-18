@@ -1,12 +1,19 @@
-import React from "react";
-import { useState } from "react";
+import React, {useState, useEffect } from 'react'
+import api from ".././services/api";
 import YouTube from 'react-youtube';
 
 export default function Treinamento() {
   const [video, setVideo] = useState("FfXjN_jFAd8");
 
-  const onVideoEnd = (event) => {
-    alert(video + " Acabou");
+  const onVideoEnd = async (event) => {
+    alert("Etapa Finalizada");
+
+    const dataobj = { 
+      	idusuario: localStorage.getItem('sgiuserid'),
+	      idtreinamento: "657f2f3de40b8c219c45175e", 
+	      progresso: 100
+    };
+    await api.post('/treinamentos/progresso', dataobj)
   }
 
   const opts = {
