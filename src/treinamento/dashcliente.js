@@ -6,6 +6,7 @@ import carregando from ".././assets/loading.gif";
 
     const [treinamentos, setTreinamentos] = useState([]);
     const [loading, setLoading] = useState("");
+    const [usernome, setUsernome] = useState(localStorage.getItem('sgiusernome'));
     const userid = localStorage.getItem('sgiuserid');
 
     async function loadTreinamentos() {
@@ -59,6 +60,7 @@ import carregando from ".././assets/loading.gif";
               <a className="action author" href="#">
                 <img src="assets/images/author/author-15.jpg" alt="Usuario" />
               </a>
+              <span>Seja bem vindo(a) {usernome}</span>
               <div className="dropdown">
                 <button className="action more" data-bs-toggle="dropdown">
                   <span />
@@ -152,10 +154,10 @@ import carregando from ".././assets/loading.gif";
                           </h3>
                         </div>
                         <div className="content-wrapper">
-                          {/* <div className="content-box">
+                          <div className="content-box">
                             <p>Progreso</p>
                             <span className="count">20%</span>
-                          </div> */}
+                          </div>
                           <div className="content-box">
                             <p>Status</p>
                             <span className="count">Ativo</span>

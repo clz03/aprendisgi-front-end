@@ -16,6 +16,8 @@ import { useNavigate } from 'react-router-dom';
         
       setLoading(true);
       event.preventDefault();
+
+      
   
       //const hashEmail = CryptoJS.AES.encrypt(email, skey).toString();
       const hashPwd = CryptoJS.SHA3(pwd).toString();
@@ -45,7 +47,14 @@ import { useNavigate } from 'react-router-dom';
           setLoading(false);
           return;
       });    
-    }
+    };
+
+    useEffect(() => {
+      if(localStorage.getItem('sgiuserid') != null){
+        navigate('/dashcliente');
+        return;
+      }
+    }, []);
 
       return (
 
