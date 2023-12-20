@@ -38,6 +38,7 @@ import { useNavigate } from 'react-router-dom';
               localStorage.setItem('sgiusernome', res.data.nome);
               localStorage.setItem('sgiuserid', res.data._id);
               localStorage.setItem('sgiadmin', res.data.isadmin);
+              localStorage.setItem('sgiempresaid', res.data.idempresa);
 
               setLoading(false);
               navigate('/dashcliente');

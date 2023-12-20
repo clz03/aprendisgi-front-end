@@ -11,6 +11,7 @@ export default function Treinamento() {
     const dataobj = { 
       	idusuario: localStorage.getItem('sgiuserid'),
 	      idtreinamento: "657f2f3de40b8c219c45175e", 
+        idempresa: localStorage.getItem('sgiempresaid'),
 	      progresso: 100
     };
     await api.post('/treinamentos/progresso', dataobj)

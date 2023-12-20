@@ -23971,7 +23971,7 @@ img {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 35px;
+  /* margin-top: 35px; */
 }
 
 @media only screen and (max-width: 767px) {

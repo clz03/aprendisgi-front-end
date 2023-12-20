@@ -1,47 +1,89 @@
 import React, {useState, useEffect } from 'react'
 import api from ".././services/api";
 import carregando from ".././assets/loading.gif";
+import DataTable from 'react-data-table-component';
 
-  export default function Dashcliente() {
+  export default function Dashgestor() {
 
+    const CustomProgresso = ({ row }) =>
+      row.progresso ? (row.progresso) : ( "0%" );
+
+    const columns = [
+      {
+          name: 'Nome',
+          selector: 'nome'
+      },
+      {
+          name: 'Progresso',
+          selector: 'progresso'
+      },
+  ];
+  
+
+    const [usuarios, setUsuarios] = useState([]);
+    const [procusuarios, setProcsuarios] = useState([]);
     const [treinamentos, setTreinamentos] = useState([]);
-    const [progresso, setProgresso] = useState("0");
-    const [loading, setLoading] = useState("");
+    const [treinamento, setTreinamento] = useState([]);
+    const [progresso, setProgresso] = useState([]);
+    const [loading, setLoading] = useState(false);
     const [usernome, setUsernome] = useState(localStorage.getItem('sgiusernome'));
     const userid = localStorage.getItem('sgiuserid');
+    const empresaid = localStorage.getItem('sgiempresaid');
+    
 
-    async function loadProgresso() {
+    async function loadUsuarios() {
       setLoading(true);
-      const query = '/treinamentos/progresso/usuario/' + userid;
-      const response = await api.get(query);
+      const query = '/treinamentos/usuarios/empresa/tenantid';
+      const response = await api.get(query,{headers: {'x-tenantid' : empresaid }});
       const data = await response.data;
-      if(data[0]?.progresso){
-        setProgresso(data[0].progresso);
-      }
+      setUsuarios(data);
       setLoading(false);
     };
 
     async function loadTreinamentos() {
       setLoading(true);
-      const query = '/treinamentos/usuarios/' + userid;
+      const query = '/treinamentos/produto';
       const response = await api.get(query);
       const data = await response.data;
-      const treinamentos = data[0].idtreinamentos
-      
-      //usar variavel treinamentos para buscar treinamentos e listar
-
-      const query2 = '/treinamentos/produto/idlist';
-      const response2 = await api.post(query2,treinamentos);
-      const data2 = await response2.data;
-      setTreinamentos(data2);
+      setTreinamentos(data);
       setLoading(false);
+    };
+
+    async function loadProgresso(selectedValue) {
+      setTreinamento(selectedValue);
+      if(selectedValue.length > 0){
+        setLoading(true);
+        
+        let cloneArr = [];
+        let index = 0;
+        for (const element of usuarios) {
+        //usuarios.forEach(async function (element, index) {
+          const query = '/treinamentos/progresso/usuario/' + element._id + '/treinamento/' + selectedValue
+          const response = await api.get(query);
+          const data = await response.data;
+          cloneArr[index] = {
+            nome: "",
+            progresso: ""
+          };
+          if(data[0]?.progresso){
+            cloneArr[index].nome = element.nome;
+            cloneArr[index].progresso = data[0].progresso + "%";
+          } else {
+            cloneArr[index].nome = element.nome;
+            cloneArr[index].progresso = "0%";
+          }
+          index ++;
+        };
+        setProcsuarios(cloneArr);
+        setLoading(false);
+      }
     };
 
     useEffect(() => {
       if(userid === null)
         window.location.href = "/login"; 
-        loadProgresso();
-        loadTreinamentos();
+      loadUsuarios();
+      loadTreinamentos();
     }, []);
    
     function handleLogout(event) {
@@ -104,10 +146,10 @@ import carregando from ".././assets/loading.gif";
           {/* Sidebar Wrapper Start */}
           <div className="sidebar-wrapper">
             <div className="menu-list">
-              <a className="active" href="/dashcliente">
+              <a href="/dashcliente">
                 <img src="assets/images/menu-icon/icon-1.png" alt="Icon" />
               </a>
-              <a href="/dashgestor">
+              <a className="active" href="/dashgestor">
                 <img src="assets/images/menu-icon/icon-2.png" alt="Icon" />
               </a>
               {/* 
@@ -133,60 +175,44 @@ import carregando from ".././assets/loading.gif";
             }
             <div className="container-fluid custom-container">
               <div className="admin-courses-tab">
-                <h3 className="title">Seus Treinamentos</h3>
+                <h3 className="title">Acompanhamento Progresso</h3>
               </div>
               {/* Admin Courses Tab End */}
               {/* Admin Courses Tab Content Start */}
               
                 <div className="admin-courses-tab-content">
                   <div className="tab-content">
+                  <div className="single-form">
+                    <select
+                          id="idtreinamentos"
+                          value={treinamento}
+                          style={{borderColor: "#a1a1a1", height: 50}}
+                          placeholder="Escolha o treinamento"
+                          onChange={event =>
+                            loadProgresso(event.target.value)
+                          }
+                        >
+                          <option
+                              key=''
+                              value=''
+                              disabled
+                            >
+                              -- Selecione --
+                            </option>
+                          {treinamentos.map(item => (
+                            <option
+                              key={item._id}
+                              value={item._id}
+                            >
+                              {item.titulo}
+                            </option>
+                          ))}
+                        </select>
+                  </div>
                     <div className="tab-pane fade show active" id="tab1">
                       {/* Courses Item Start */}
 
-                      {/* Item Start */}
-                      {treinamentos.map(item => (
-                        <div className="courses-item">
-                        <div className="item-thumb">
-                          <a href="/treinamentoManipulador">
-                            <img
-                              src="assets/images/BPFManipulador.jpeg"
-                              alt="Courses"
-                              style={{width:280}}
-                            />
-                          </a>
-                        </div>
-                        <div className="content-title">
-                          <div className="meta">
-                            <a href="/treinamentoManipulador" className="action">
-                              Treinamento Online
-                            </a>
-                          </div>
-                          <h3 className="title">
-                            <a href="/treinamentoManipulador">
-                              {item.titulo}
-                            </a>
-                          </h3>
-                        </div>
-                        <div className="content-wrapper">
-                          <div className="content-box">
-                            <p>Progresso</p>
-                            <span className="count">{progresso}%</span>
-                          </div>
-                          <div className="content-box">
-                            <p>Status</p>
-                            <span className="count">Ativo</span>
-                          </div>
-                          {progresso == "100" &&
-                          <div className="content-box">
-                            <p>Realizar</p>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXa6NsyPv9dtHt6VVgh0XjlojVFCSU3jpNkN3oaOUkh7sKWw/viewform?usp=sf_link" target='_blank' style={{textDecoration:"underline"}}><span className="count">Avaliação</span></a>
-                          </div>
-                          }
-                        </div>
-                      </div>
-                      ))}
-
-                      {/* Item End */}
+                      <DataTable columns={columns} data={procusuarios} noDataComponent="Selecione o treinamento" />
                       
                     </div>
 
