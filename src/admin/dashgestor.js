@@ -1,12 +1,16 @@
 import React, {useState, useEffect } from 'react'
-import api from ".././services/api";
+import api from "../services/api";
 import carregando from ".././assets/loading.gif";
+import MenuAdmin from "./components/menuAdmin";
 import DataTable from 'react-data-table-component';
 
   export default function Dashgestor() {
 
-    const CustomProgresso = ({ row }) =>
-      row.progresso ? (row.progresso) : ( "0%" );
+    const CustomAvaliacao = ({ row }) =>
+      ( "0 tentativas" );
+
+    const CustomCertificado = ({ row }) =>
+      ( "Não disponível" );
 
     const columns = [
       {
@@ -17,6 +21,14 @@ import DataTable from 'react-data-table-component';
           name: 'Progresso',
           selector: 'progresso'
       },
+      {
+        name: 'Avaliação',
+        cell: (row) => <CustomAvaliacao row={row} />,
+      },
+      {
+        name: 'Certificado',
+        cell: (row) => <CustomCertificado row={row} />,
+      }
   ];
   
 
@@ -144,26 +156,9 @@ import DataTable from 'react-data-table-component';
         {/* Courses Admin Start */}
         <div className="section overflow-hidden position-relative" id="wrapper">
           {/* Sidebar Wrapper Start */}
-          <div className="sidebar-wrapper">
-            <div className="menu-list">
-              <a href="/dashcliente">
-                <img src="assets/images/menu-icon/icon-1.png" alt="Icon" />
-              </a>
-              <a className="active" href="/dashgestor">
-                <img src="assets/images/menu-icon/icon-2.png" alt="Icon" />
-              </a>
-              {/* 
-              <a href="overview.html">
-                <img src="assets/images/menu-icon/icon-3.png" alt="Icon" />
-              </a>
-              <a href="engagement.html">
-                <img src="assets/images/menu-icon/icon-4.png" alt="Icon" />
-              </a>
-              <a href="traffic-conversion.html">
-                <img src="assets/images/menu-icon/icon-5.png" alt="Icon" />
-              </a> */}
-            </div>
-          </div>
+          
+          <MenuAdmin></MenuAdmin>
+
           {/* Sidebar Wrapper End */}
           {/* Page Content Wrapper Start */}
           
@@ -209,7 +204,7 @@ import DataTable from 'react-data-table-component';
                           ))}
                         </select>
                   </div>
-                    <div className="tab-pane fade show active" id="tab1">
+                    <div className="tab-pane fade show active" style={{minHeight:400}} id="tab1">
                       {/* Courses Item Start */}
 
                       <DataTable columns={columns} data={procusuarios} noDataComponent="Selecione o treinamento" />

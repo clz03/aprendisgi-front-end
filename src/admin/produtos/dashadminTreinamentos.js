@@ -1,32 +1,52 @@
-import React from "react";
+import React, {useState, useEffect } from 'react'
+import api from "../../services/api";
+import carregando from "../../assets/loading.gif";
 import DataTable from 'react-data-table-component';
-import MenuAdmin from "./components/menuAdmin";
+import MenuAdmin from "../components/menuAdmin";
+import { useNavigate } from 'react-router-dom';
 
-export default function dashadminTreinamentos() {
+export default function DashadminTreinamentos() {
+
+  const [usuarios, setUsuarios] = useState([]);
+  const [loading, setLoading] = useState("");
+  const [rowsSel, setRowsSel] = useState([]);
+  const userid = localStorage.getItem('sgiuserid');
+
+  let navigate = useNavigate();
 
   const columns = [
     {
-        name: 'Title',
-        selector: row => row.title,
+        name: 'Titulo',
+        selector: 'titulo'
     },
     {
-        name: 'Year',
-        selector: row => row.year,
-    },
+        name: 'Descrição',
+        selector: 'descr'
+    }
 ];
 
-const data = [
-    {
-        id: 1,
-        title: 'Beetlejuice',
-        year: '1988',
-    },
-    {
-        id: 2,
-        title: 'Ghostbusters',
-        year: '1984',
-    },
-];
+async function loadTreinamentos() {
+  setLoading(true);
+  const query = '/treinamentos/produto';
+  const response = await api.get(query);
+  const data = await response.data;
+  setUsuarios(data);
+  setLoading(false);
+};
+
+const goToPage = (state) => {
+  navigate("/treinamento/" + state._id);
+};
+
+const handleChange = (state) => {
+  setRowsSel(state.selectedRows);
+};
+
+useEffect(() => {
+  if(userid === null)
+    window.location.href = "/login"; 
+  loadTreinamentos();
+}, []);
 
     return (
       <div className="main-wrapper main-wrapper-02">
@@ -78,18 +98,35 @@ const data = [
           <MenuAdmin></MenuAdmin>
           {/* Sidebar Wrapper End */}
           {/* Page Content Wrapper Start */}
-          <div className="page-content-wrapper" style={{paddingTop:0}}>
+          <div className="page-content-wrapper" style={{paddingTop:0, minHeight:650}}>
+          {loading && 
+                <div style={{ alignItems:'center', textAlign: 'center' }}>
+                    <img src={carregando} width="80"></img>
+                </div>
+            }
             <div className="container-fluid custom-container">
                           {/* Admin Courses Tab Start */}
               <div className="admin-courses-tab">
-                <h3 className="title">Treinamentos Cadastrados</h3>
+                <h3 className="title">Treinamentos</h3>
               </div>
               {/* Admin Courses Tab End */}
               {/* Admin Courses Tab Content Start */}
               <div className="admin-courses-tab-content">
+              <div class="tab-btn">
+                    <a href="/treinamentoNovo" class="btn btn-primary btn-hover-dark">Novo Treinamento</a>
+                </div>
               <div className="tab-content">
               
-              <DataTable columns={columns} data={data} />
+              <DataTable 
+               columns={columns}
+               data={usuarios}
+               onRowClicked={goToPage}
+               pointerOnHover
+               highlightOnHover
+               selectableRows // add for checkbox selection
+               Clicked
+               onSelectedRowsChange={handleChange}
+               noDataComponent={""} />
 
               </div>
               </div>

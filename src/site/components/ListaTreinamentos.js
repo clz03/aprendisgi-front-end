@@ -16,8 +16,8 @@ class ListaTreinamentos extends React.Component {
               <div className="col-md-6">
                 {/* Section Title Start */}
                 <div className="section-title shape-02">
-                  <h5 className="sub-title">Conheça abaixo nossos treinamentos</h5>
-                  <h2 className="main-title">Acesse ao lado para iniciar seu <span>treinamento</span></h2>
+                  <h5 className="sub-title">Seu sistema de treinamentos online</h5>
+                  <h2 className="main-title">Acesse ao lado para criar seu <span>ambiente</span></h2>
                 </div>
                 {/* Section Title End */}
               </div>

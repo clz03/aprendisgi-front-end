@@ -8,8 +8,11 @@ class ComoFunciona extends React.Component {
           {/* Section Title Start */}
           <div className="section-title shape-03 text-center">
             <h2 className="main-title">
-              Como funciona o <span> treinamento ?</span>
+            Gestão da educação corporativa do 
+            <span> inicio ao fim</span>
             </h2>
+            <br></br>
+            <p>Crie seu próprio ambiente de gestão de treinamentos, com sua identidade visual e controle </p>
           </div>
           {/* Section Title End */}
           {/* How it Work Wrapper Start */}
@@ -22,11 +25,10 @@ class ComoFunciona extends React.Component {
                 alt="Shape"
               />
               <div className="work-icon">
-                <i className="flaticon-transparency" />
+                <i className="flaticon-forms" />
               </div>
               <div className="work-content">
-                <h3 className="title">Escolha seu curso</h3>
-                <p>Encontre o treinamento que se adeque a sua necessidade</p>
+                <h5>Crie e envie treinamento aos seus colaboradores</h5>
               </div>
             </div>
             {/* Single Work End */}
@@ -47,11 +49,10 @@ class ComoFunciona extends React.Component {
                 alt="Shape"
               />
               <div className="work-icon">
-                <i className="flaticon-forms" />
+                <i className="flaticon-transparency" />
               </div>
               <div className="work-content">
-                <h3 className="title">Registre-se</h3>
-                <p>Realize seu cadastro / pedido junto a WCQI</p>
+              <h5>Gerencie prazos para conclusão do treinamento</h5>
               </div>
             </div>
             {/* Single Work End */}
@@ -72,14 +73,33 @@ class ComoFunciona extends React.Component {
                 alt="Shape"
               />
               <div className="work-icon">
-                <i className="flaticon-badge" />
+                <i className="flaticon-increase" />
               </div>
               <div className="work-content">
-                <h3 className="title">Seja certificado</h3>
-                <p>Obtenha seu certificado após a realização do treinamento</p>
+              <h5>Acompanhe o desempenho de cada colaborador</h5>
               </div>
             </div>
             {/* Single Work End */}
+            <div className="work-arrow">
+              <img
+                className="arrow"
+                src="assets/images/shape/shape-17.png"
+                alt="Shape"
+              />
+            </div>
+            <div className="single-work">
+              <img
+                className="shape-3"
+                src="assets/images/shape/shape-16.png"
+                alt="Shape"
+              />
+              <div className="work-icon">
+                <i className="flaticon-badge" />
+              </div>
+              <div className="work-content">
+              <h5>Envie certificados personalizados</h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -9,11 +9,21 @@ import Detalhe from './site/pages/detalhe';
 import Login from './site/pages/login';
 import TreinamentoBPF from './treinamento/treinamentoBPF';
 import TreinamentoBPFManipulador from './treinamento/treinamentoManipulador';
-import AdminCliente from './treinamento/dashcliente';
-import AdminClienteGestor from './treinamento/dashgestor';
-import AdminOwner from './treinamento/dashadmin';
-import AdminOwnerEmpresas from './treinamento/dashadminEmpresas';
-import AdminOwnerTreinamentos from './treinamento/dashadminTreinamentos';
+import AdminCliente from './admin/dashcliente';
+import AdminClienteGestor from './admin/dashgestor';
+import AdminOwner from './admin/dashadmin';
+
+import AdminOwnerUsuarios from './admin/usuarios/dashadminUsuarios';
+import AdminNovoUsuario from './admin/usuarios/novoUsuario';
+import AdminEditarUsuario from './admin/usuarios/editarUsuario';
+
+import AdminOwnerEmpresas from './admin/empresas/dashadminEmpresas';
+import AdminNovoEmpresa from './admin/empresas/novoEmpresa';
+import AdminEditarEmpresa from './admin/empresas/editarEmpresa';
+
+import AdminOwnerProdutos from './admin/produtos/dashadminTreinamentos';
+import AdminNovoProduto from './admin/produtos/novoProduto';
+import AdminEditarProduto from './admin/produtos/editarProduto';
 
 
 
@@ -29,14 +39,25 @@ export default function Rotas() {
                 <Route path="/contato" element={<Contato/>}/>
                 <Route path="/login" element={<Login/>}/>
                 {/* ADMIN */}
+                <Route path="/dashgestor" element={<AdminClienteGestor/>}/>
+                <Route path="/dashadmin" element={<AdminOwner/>}/>
+                
+                <Route path="/dashadminEmpresas" element={<AdminOwnerEmpresas/>}/>
+                <Route path="/empresaNovo" element={<AdminNovoEmpresa/>}/>
+                <Route path="/empresa/:id" element={<AdminEditarEmpresa/>}/>
+                
+                <Route path="/dashadminUsuarios" element={<AdminOwnerUsuarios/>}/>
+                <Route path="/usuarioNovo" element={<AdminNovoUsuario/>}/>
+                <Route path="/usuario/:id" element={<AdminEditarUsuario/>}/>
+                
+                <Route path="/dashadminTreinamentos" element={<AdminOwnerProdutos/>}/>
+                <Route path="/treinamentoNovo" element={<AdminNovoProduto/>}/>
+                <Route path="/treinamento/:id" element={<AdminEditarProduto/>}/>
+                
+                {/* TREINAMENTOS CLIENTE */}
                 <Route path="/treinamentoBPF" element={<TreinamentoBPF/>}/>
                 <Route path="/treinamentoManipulador" element={<TreinamentoBPFManipulador/>}/>
                 <Route path="/dashcliente" element={<AdminCliente/>}/>
-                <Route path="/dashgestor" element={<AdminClienteGestor/>}/>
-                <Route path="/dashadmin" element={<AdminOwner/>}/>
-                <Route path="/dashadminEmpresas" element={<AdminOwnerEmpresas/>}/>
-                <Route path="/dashadminTreinamentos" element={<AdminOwnerTreinamentos/>}/>
-
                 
             </Routes>
         </BrowserRouter>

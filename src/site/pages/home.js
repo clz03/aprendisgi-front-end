@@ -49,7 +49,7 @@ export default function Home() {
           <div className="slider-content">
             <h4 className="sub-title">Ambiente virtual de aprendizagem</h4>
             <h2 className="main-title">
-              Treinamentos e desenvolvimento online no melhor dia e horário para os seus&nbsp;
+              Gestão de treinamentos online no melhor dia e horário para os seus&nbsp;
               <span>colaboradores</span>
             </h2>
             {/* <p>It has survived not only five centuries but also the leap into electronic typesetting.</p> */}
@@ -64,24 +64,24 @@ export default function Home() {
             src="assets/images/shape/shape-5.png"
             alt="Shape"
           />
-          <div className="box-content">
+          {/* <div className="box-content">
             <div className="box-wrapper">
               <i className="flaticon-open-book" />
               <span className="count">+1000</span>
               <p>alunos</p>
             </div>
-          </div>
-          <img
+          </div> */}
+          {/* <img
             className="shape-2"
             src="assets/images/shape/shape-6.png"
             alt="Shape"
-          />
+          /> */}
         </div>
         {/* Slider Courses Box End */}
         {/* Slider Images Start */}
         <div className="slider-images">
           <div className="images">
-            <img src="assets/images/slider/slider-1.png" alt="Slider" />
+            <img src="assets/images/slider/slider-5.png" alt="Slider" />
           </div>
         </div>
         {/* Slider Images End */}
@@ -105,11 +105,10 @@ export default function Home() {
         {/* Slider Video End */}
       </div>
       
-      
-      <ListaTreinamentos />
-      
       <ComoFunciona />
       
+      <ListaTreinamentos />
+
       <BaixarApp />
       
       <Testemunhos />

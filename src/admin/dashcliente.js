@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react'
-import api from ".././services/api";
+import api from "../services/api";
 import carregando from ".././assets/loading.gif";
+import MenuAdmin from "./components/menuAdmin";
 
   export default function Dashcliente() {
 
@@ -62,7 +63,8 @@ import carregando from ".././assets/loading.gif";
             
             <div className="login-header-logo">
               <a href="/">
-                <img src="assets/images/logo-treinarsgi3.png" alt="Logo" width={200} />
+                {/* <img src="assets/images/logo-treinarsgi3.png" alt="Logo" width={200} /> */}
+                <img src="assets/images/supergelados.png" alt="Logo" width={200} />
               </a>
             </div>
             
@@ -102,26 +104,9 @@ import carregando from ".././assets/loading.gif";
         {/* Courses Admin Start */}
         <div className="section overflow-hidden position-relative" id="wrapper">
           {/* Sidebar Wrapper Start */}
-          <div className="sidebar-wrapper">
-            <div className="menu-list">
-              <a className="active" href="/dashcliente">
-                <img src="assets/images/menu-icon/icon-1.png" alt="Icon" />
-              </a>
-              <a href="/dashgestor">
-                <img src="assets/images/menu-icon/icon-2.png" alt="Icon" />
-              </a>
-              {/* 
-              <a href="overview.html">
-                <img src="assets/images/menu-icon/icon-3.png" alt="Icon" />
-              </a>
-              <a href="engagement.html">
-                <img src="assets/images/menu-icon/icon-4.png" alt="Icon" />
-              </a>
-              <a href="traffic-conversion.html">
-                <img src="assets/images/menu-icon/icon-5.png" alt="Icon" />
-              </a> */}
-            </div>
-          </div>
+
+          <MenuAdmin></MenuAdmin>
+          
           {/* Sidebar Wrapper End */}
           {/* Page Content Wrapper Start */}
           
@@ -132,15 +117,20 @@ import carregando from ".././assets/loading.gif";
                 </div>
             }
             <div className="container-fluid custom-container">
+              <br></br>
+              <p>Bem vindo(a) ao ambiente de treinamentos da Supergelados Jundiaí.
+                <br></br>Abaixo você encontrará os treinamentos que seu gestor designou a você. Clique sobre eles para realizar o treinamento e liberar a avaliação.
+                <br></br> Após finalizar a avaliação, seu certificado ficará disponivel no sistema.
+              </p>
               <div className="admin-courses-tab">
-                <h3 className="title">Seus Treinamentos</h3>
+                <h3 className="title">Meus Treinamentos</h3>
               </div>
               {/* Admin Courses Tab End */}
               {/* Admin Courses Tab Content Start */}
               
                 <div className="admin-courses-tab-content">
                   <div className="tab-content">
-                    <div className="tab-pane fade show active" id="tab1">
+                    <div className="tab-pane fade show active" style={{minHeight:400}} id="tab1">
                       {/* Courses Item Start */}
 
                       {/* Item Start */}

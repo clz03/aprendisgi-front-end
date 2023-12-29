@@ -61,7 +61,7 @@ export default function Sobre() {
                 {/* Section Title Start */}
                 <div className="section-title shape-02">
                   <h5 className="sub-title">Conheça um pouco sobre nós</h5>
-                  <h2 className="main-title">Acesse ao lado para ver nossos <span>treinamentos</span></h2>
+                  <h2 className="main-title">Acesse ao lado para criar seu <span>ambiente</span></h2>
                 </div>
                 {/* Section Title End */}
               </div>
