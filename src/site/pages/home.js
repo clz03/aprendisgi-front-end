@@ -19,7 +19,7 @@ export default function Home() {
     <div className="main-wrapper">
       <div className="header-section">
         <div className="header-main">
-          <div className="container">
+          <div className="container g-0">
             <div className="header-main-wrapper">
               <div className="header-logo">
                 <a href="index.html">

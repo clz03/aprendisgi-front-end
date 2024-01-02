@@ -91,7 +91,7 @@ class Footer extends React.Component {
                 <a href="#">Sitemap</a>
               </div>
               <div className="copyright-text">
-                <p>© 2023 TreinarSGI</p>
+                <p>© 2024 TreinarSGI</p>
               </div>
             </div>
             {/* Footer Copyright End */}

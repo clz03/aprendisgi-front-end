@@ -98,7 +98,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #52565b;
-  background-color: #fff;
+  background-color: #f3f2f2;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -700,7 +700,7 @@ progress {
 
 @media (min-width: 1600px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: 1200px;
+    max-width: 1600px;
   }
 }
 
@@ -16850,7 +16850,6 @@ img {
 .header-menu ul li a {
   font-size: 18px;
   font-weight: 500;
-  text-transform: capitalize;
   color: #212832;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -16916,7 +16915,7 @@ img {
 
 .header-menu .sub-menu {
   position: absolute;
-  width: 225px;
+  width: 375px;
   background-color: #fff;
   border-top: 2px solid #212832;
   padding: 10px 0px;
@@ -17098,7 +17097,6 @@ img {
 
 .header-menu .mega-sub-menu > li .menu-item > li > a {
   color: #52565b;
-  text-transform: capitalize;
   line-height: 32px;
   font-weight: 400;
   font-size: 14px;
@@ -17145,7 +17143,6 @@ img {
 .header-sign-in-up ul li a {
   font-size: 18px;
   font-weight: 500;
-  text-transform: capitalize;
   color: #212832;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -17366,7 +17363,6 @@ img {
 .mobile-sign-in-up ul li a {
   font-size: 16px;
   font-weight: 500;
-  text-transform: capitalize;
   color: #212832;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -21988,8 +21984,8 @@ img {
 .register-login-wrapper {
   padding: 70px;
   padding-top: 20px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
-  border-radius: 10px;
+  /* border: 1px solid rgba(48, 146, 85, 0.2);
+  border-radius: 10px; */
 }
 
 @media only screen and (max-width: 575px) {
@@ -22056,7 +22052,7 @@ img {
 .register-login-form {
   max-width: 400px;
   margin-left: auto;
-  margin-top: 45px;
+  margin-top: 1px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {

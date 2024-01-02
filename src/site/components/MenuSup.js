@@ -10,10 +10,19 @@ class MenuSup extends React.Component {
                       <a href="/">Home</a>
                     </li>
                     <li>
-                      <a href="/treinamentos">Treinamentos</a>
+                      <a href="/sobre">Quem Somos </a>
                     </li>
                     <li>
-                      <a href="/sobre">Sobre </a>
+                      <a href="#">Módulos</a>
+                      <ul class="sub-menu">
+                        <li><a href="/treinamentos">- Treinamentos</a></li>
+                        <li><a href="/login">- Canal de Denúncias</a></li>
+                        <li><a href="/login">- Quizes</a></li>
+                        <li><a href="/login">- Canal de Sugestões e Melhorias</a></li>
+                        <li><a href="/login">- Código de Ética e Conduta</a></li>
+                        <li><a href="/login">- Avaliação de Competência e Desempenho</a></li>
+                        <li><a href="/login">- Integração</a></li>
+                      </ul>
                     </li>
                     <li>
                       <a href="/contato">Contato</a>

@@ -81,7 +81,8 @@ import { useNavigate } from 'react-router-dom';
               <div className="col-lg-6">
                 
                 <div className="register-login-form">
-                  <h3 className="title">Acesse <span>Aqui</span></h3>
+                  <h3 className="title">Seja <span>Bem Vindo(a)</span></h3>
+                  <h5>Faça seu login</h5>
                   <div className="form-wrapper">
                     <form onSubmit={handleSubmit}>
                 
