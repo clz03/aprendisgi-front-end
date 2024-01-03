@@ -47,10 +47,10 @@ export default function Home() {
         <div className="container">
           {/* Slider Content Start */}
           <div className="slider-content">
-            <h4 className="sub-title">Ambiente virtual de aprendizagem</h4>
+            <h4 className="sub-title">Revolucione seu sistema de Gestão</h4>
             <h2 className="main-title">
-              Gestão de treinamentos online no melhor dia e horário para os seus&nbsp;
-              <span>colaboradores</span>
+              Gestão de aprendizagem dos colaboradores, processos internos, normas e denúncias.
+              
             </h2>
             {/* <p>It has survived not only five centuries but also the leap into electronic typesetting.</p> */}
             {/* <a class="btn btn-primary btn-hover-dark" href="#">Start A Course</a> */}

@@ -5,6 +5,16 @@ class ComoFunciona extends React.Component {
       return (
         <div className="section section-padding mt-n1">
         <div className="container">
+        <div class="faq-tab-menu">
+              <ul class="nav nav-justified">
+                  <li class="nav-item"><button class="nav-link active" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab1">Segurança do Trabalho</button></li>
+                  <li class="nav-item"><button class="nav-link" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab2">Qualidade e Produtividade</button></li>
+                  <li class="nav-item"><button class="nav-link" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab3">Meio Ambiente</button></li>
+                  <li class="nav-item"><button class="nav-link" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab4">RH e Liderança</button></li>
+                  <li class="nav-item"><button class="nav-link" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab5">Ética e Resposabilidade Social</button></li>
+              </ul>
+          </div>
+          <br></br>
           {/* Section Title Start */}
           <div className="section-title shape-03 text-center">
             <h2 className="main-title">
