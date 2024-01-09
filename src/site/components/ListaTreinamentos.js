@@ -81,10 +81,6 @@ class ListaTreinamentos extends React.Component {
                             {" "}
                             <i className="icofont-clock-time" /> 02 hr 15 mins
                           </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 455 alunos{" "}
-                          </span>
                         </div>
                       </div>
                     </div>
@@ -110,10 +106,7 @@ class ListaTreinamentos extends React.Component {
                             {" "}
                             <i className="icofont-clock-time" /> 24 mins
                           </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 300 alunos{" "}
-                          </span>
+                          
                         </div>
                       </div>
                     </div>
@@ -140,10 +133,7 @@ class ListaTreinamentos extends React.Component {
                             {" "}
                             <i className="icofont-clock-time" /> 44 mins
                           </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 325 alunos{" "}
-                          </span>
+                          
                         </div>
                       </div>
                     </div>
@@ -169,10 +159,7 @@ class ListaTreinamentos extends React.Component {
                             {" "}
                             <i className="icofont-clock-time" /> 44 mins
                           </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 325 alunos{" "}
-                          </span>
+                          
                         </div>
                       </div>
                     </div>
@@ -198,15 +185,36 @@ class ListaTreinamentos extends React.Component {
                             {" "}
                             <i className="icofont-clock-time" /> 44 mins
                           </span>
-                          <span>
-                            {" "}
-                            <i className="icofont-read-book" /> 325 alunos{" "}
-                          </span>
+                          
                         </div>
                       </div>
                     </div>
                     </div>
                     {/* Single Courses End */}
+                    <div className="col-lg-4 col-md-6">
+                  <div className="single-courses">
+                      <div className="courses-images">
+                        <a href="/login">
+                          <img
+                            src="assets/images/foodDefense.jpg"
+                            alt="Courses"
+                          />
+                        </a>
+                      </div>
+                      <div className="courses-content">
+                        <h4 className="title">
+                          <a href="/login">Food Defense</a>
+                        </h4>
+                        <div className="courses-meta">
+                          <span>
+                            {" "}
+                            <i className="icofont-clock-time" /> 32 mins
+                          </span>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    </div>
                 </div>
               </div>
               {/* All Courses Wrapper End */}

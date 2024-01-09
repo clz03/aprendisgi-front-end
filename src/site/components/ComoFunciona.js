@@ -12,6 +12,7 @@ class ComoFunciona extends React.Component {
                   <li class="nav-item"><button class="nav-link" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab3">Meio Ambiente</button></li>
                   <li class="nav-item"><button class="nav-link" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab4">RH e Liderança</button></li>
                   <li class="nav-item"><button class="nav-link" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab5">Ética e Responsabilidade Social</button></li>
+                  <li class="nav-item"><button class="nav-link" style={{cursor:'crosshair'}} data-bs-toggle="tab" data-bs-target="#tab5">Segurança de Alimentos</button></li>
               </ul>
           </div>
           <br></br>

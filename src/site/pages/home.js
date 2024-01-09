@@ -49,7 +49,7 @@ export default function Home() {
           <div className="slider-content">
             <h4 className="sub-title">Revolucione seu sistema de Gestão</h4>
             <h2 className="main-title">
-              Gestão de aprendizagem dos colaboradores, processos internos, normas e denúncias.
+              Escola de Treinamentos Corporativa, 24 horas para treinar e desenvolver sua equipe
               
             </h2>
             {/* <p>It has survived not only five centuries but also the leap into electronic typesetting.</p> */}

@@ -9,6 +9,7 @@ import Detalhe from './site/pages/detalhe';
 import Login from './site/pages/login';
 import TreinamentoBPF from './treinamento/treinamentoBPF';
 import TreinamentoBPFManipulador from './treinamento/treinamentoManipulador';
+import TreinamentoFoodDefense from './treinamento/treinamentoFoodDefense';
 import AdminCliente from './admin/dashcliente';
 import AdminClienteGestor from './admin/dashgestor';
 import AdminOwner from './admin/dashadmin';
@@ -57,6 +58,7 @@ export default function Rotas() {
                 {/* TREINAMENTOS CLIENTE */}
                 <Route path="/treinamentoBPF" element={<TreinamentoBPF/>}/>
                 <Route path="/treinamentoManipulador" element={<TreinamentoBPFManipulador/>}/>
+                <Route path="/treinamentoFoodDefense" element={<TreinamentoFoodDefense/>}/>
                 <Route path="/dashcliente" element={<AdminCliente/>}/>
                 
             </Routes>

@@ -16,9 +16,7 @@ import MenuAdmin from "./components/menuAdmin";
       const query = '/treinamentos/progresso/usuario/' + userid;
       const response = await api.get(query);
       const data = await response.data;
-      if(data[0]?.progresso){
-        setProgresso(data[0].progresso);
-      }
+      setProgresso(data);
       setLoading(false);
     };
 
@@ -134,12 +132,13 @@ import MenuAdmin from "./components/menuAdmin";
                       {/* Courses Item Start */}
 
                       {/* Item Start */}
-                      {treinamentos.map(item => (
+                      {treinamentos.map((item, index) => (
+                      <>
                         <div className="courses-item">
                         <div className="item-thumb">
-                          <a href="/treinamentoManipulador">
+                          <a href={"/" + item.url}>
                             <img
-                              src="assets/images/BPFManipulador.jpeg"
+                              src={"assets/images/" + item.img}
                               alt="Courses"
                               style={{width:280}}
                             />
@@ -147,12 +146,12 @@ import MenuAdmin from "./components/menuAdmin";
                         </div>
                         <div className="content-title">
                           <div className="meta">
-                            <a href="/treinamentoManipulador" className="action">
+                            <a href={"/" + item.url} className="action">
                               Treinamento Online
                             </a>
                           </div>
                           <h3 className="title">
-                            <a href="/treinamentoManipulador">
+                            <a href={"/" + item.url}>
                               {item.titulo}
                             </a>
                           </h3>
@@ -160,7 +159,7 @@ import MenuAdmin from "./components/menuAdmin";
                         <div className="content-wrapper">
                           <div className="content-box">
                             <p>Progresso</p>
-                            <span className="count">{progresso}%</span>
+                            <span className="count">{progresso[index]? progresso[index].progresso : "0"}%</span>
                           </div>
                           <div className="content-box">
                             <p>Status</p>
@@ -174,7 +173,9 @@ import MenuAdmin from "./components/menuAdmin";
                           }
                         </div>
                       </div>
-                      ))}
+
+                      </>
+                    ))}
 
                       {/* Item End */}
                       
