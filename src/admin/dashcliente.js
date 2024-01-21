@@ -9,7 +9,9 @@ import MenuAdmin from "./components/menuAdmin";
     const [progresso, setProgresso] = useState("0");
     const [loading, setLoading] = useState("");
     const [usernome, setUsernome] = useState(localStorage.getItem('sgiusernome'));
+    const [imglogo, setImglogo] = useState('');
     const userid = localStorage.getItem('sgiuserid');
+    const userempresaid = localStorage.getItem('sgiempresaid');
 
     async function loadProgresso() {
       setLoading(true);
@@ -36,11 +38,27 @@ import MenuAdmin from "./components/menuAdmin";
       setLoading(false);
     };
 
+    async function loadEmpresa() {
+      const query = '/treinamentos/empresa/' + userempresaid;
+      const response = await api.get(query);
+      const data = await response.data;
+      if(data){
+        if(data[0].nome == 'Keishi LTDA'){
+          setImglogo("keishi.png")
+          return
+        }
+        if(data[0].nome == 'Supergelados LTDA'){
+          setImglogo("supergelados.png")
+        }
+      }
+    };
+
     useEffect(() => {
       if(userid === null)
         window.location.href = "/login"; 
         loadProgresso();
         loadTreinamentos();
+        loadEmpresa();
     }, []);
    
     function handleLogout(event) {
@@ -62,7 +80,9 @@ import MenuAdmin from "./components/menuAdmin";
             <div className="login-header-logo">
               <a href="/">
                 {/* <img src="assets/images/logo-treinarsgi3.png" alt="Logo" width={200} /> */}
-                <img src="assets/images/supergelados.png" alt="Logo" width={200} />
+                {/* <img src="assets/images/supergelados.png" alt="Logo" width={200} /> */}
+                
+                <img src={"assets/images/" + imglogo} alt="Logo" width={200} />
               </a>
             </div>
             
