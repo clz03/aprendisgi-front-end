@@ -31,7 +31,7 @@ export default function MenuMobile(props) {
           <div className="mobile-sign-in-up">
             <ul>
               <li>
-                <a className="sign-in" href="/login">
+                <a className="sign-in" href="https://treinarsgi-plataforma.netlify.app">
                   Acessar
                 </a>
               </li>
@@ -50,12 +50,12 @@ export default function MenuMobile(props) {
                       <a href="#">Módulos</a>
                       <ul class="sub-menu">
                       <li><a href="/treinamentos">- Treinamentos</a></li>
-                        <li><a href="/login">- Canal de Denúncias</a></li>
-                        <li><a href="/login">- Quizes</a></li>
-                        <li><a href="/login">- Canal de Sugestões e Melhorias</a></li>
-                        <li><a href="/login">- Código de Ética e Conduta</a></li>
-                        <li><a href="/login">- Avaliação de Competência e Desempenho</a></li>
-                        <li><a href="/login">- Integração</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Canal de Denúncias</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Quizes</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Canal de Sugestões e Melhorias</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Código de Ética e Conduta</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Avaliação de Competência e Desempenho</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Integração</a></li>
                       </ul>
                     </li>
                     <li>

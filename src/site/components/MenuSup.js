@@ -16,12 +16,12 @@ class MenuSup extends React.Component {
                       <a href="#">Módulos</a>
                       <ul class="sub-menu">
                         <li><a href="/treinamentos">- Treinamentos</a></li>
-                        <li><a href="/login">- Canal de Denúncias</a></li>
-                        <li><a href="/login">- Quizes</a></li>
-                        <li><a href="/login">- Canal de Sugestões e Melhorias</a></li>
-                        <li><a href="/login">- Código de Ética e Conduta</a></li>
-                        <li><a href="/login">- Avaliação de Competência e Desempenho</a></li>
-                        <li><a href="/login">- Integração</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Canal de Denúncias</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Quizes</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Canal de Sugestões e Melhorias</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Código de Ética e Conduta</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Avaliação de Competência e Desempenho</a></li>
+                        <li><a href="https://treinarsgi-plataforma.netlify.app">- Integração</a></li>
                       </ul>
                     </li>
                     <li>
@@ -32,7 +32,7 @@ class MenuSup extends React.Component {
           <div className="header-sign-in-up d-none d-lg-block">
           <ul>
             <li>
-              <a className="sign-up" href="/login">
+              <a className="sign-up" href="https://treinarsgi-plataforma.netlify.app">
                 Acessar
               </a>
             </li>

@@ -23,7 +23,7 @@ class ListaTreinamentos extends React.Component {
               </div>
               <div className="col-md-6">
                 <div className="call-to-action-btn">
-                  <a className="btn btn-primary btn-hover-dark" href="/login">Acessar</a>
+                  <a className="btn btn-primary btn-hover-dark" href="https://treinarsgi-plataforma.netlify.app">Acessar</a>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ class ListaTreinamentos extends React.Component {
                     {/* Single Courses Start */}
                     <div className="single-courses">
                       <div className="courses-images">
-                        <a href="/login">
+                        <a href="https://treinarsgi-plataforma.netlify.app">
                           <img
                             src="assets/images/BPF.jpeg"
                             alt="Courses"
@@ -74,7 +74,7 @@ class ListaTreinamentos extends React.Component {
                       </div>
                       <div className="courses-content">
                         <h4 className="title">
-                          <a href="/login">BPF - Alimentos</a>
+                          <a href="https://treinarsgi-plataforma.netlify.app">BPF - Alimentos</a>
                         </h4>
                         <div className="courses-meta">
                           <span>
@@ -90,7 +90,7 @@ class ListaTreinamentos extends React.Component {
                     {/* Single Courses Start */}
                     <div className="single-courses">
                       <div className="courses-images">
-                        <a href="/login">
+                        <a href="https://treinarsgi-plataforma.netlify.app">
                           <img
                             src="assets/images/BPFManipulador.jpeg"
                             alt="Courses"
@@ -99,7 +99,7 @@ class ListaTreinamentos extends React.Component {
                       </div>
                       <div className="courses-content">
                         <h4 className="title">
-                          <a href="/login">BPF - Manipulador</a>
+                          <a href="https://treinarsgi-plataforma.netlify.app">BPF - Manipulador</a>
                         </h4>
                         <div className="courses-meta">
                           <span>
@@ -117,7 +117,7 @@ class ListaTreinamentos extends React.Component {
                   <div className="col-lg-4 col-md-6">
                   <div className="single-courses">
                       <div className="courses-images">
-                        <a href="/login">
+                        <a href="https://treinarsgi-plataforma.netlify.app">
                           <img
                             src="assets/images/HACCP.png"
                             alt="Courses"
@@ -126,7 +126,7 @@ class ListaTreinamentos extends React.Component {
                       </div>
                       <div className="courses-content">
                         <h4 className="title">
-                          <a href="/login">HACCP</a>
+                          <a href="https://treinarsgi-plataforma.netlify.app">HACCP</a>
                         </h4>
                         <div className="courses-meta">
                           <span>
@@ -143,7 +143,7 @@ class ListaTreinamentos extends React.Component {
                   <div className="col-lg-4 col-md-6">
                   <div className="single-courses">
                       <div className="courses-images">
-                        <a href="/login">
+                        <a href="https://treinarsgi-plataforma.netlify.app">
                           <img
                             src="assets/images/nr06.png"
                             alt="Courses"
@@ -152,7 +152,7 @@ class ListaTreinamentos extends React.Component {
                       </div>
                       <div className="courses-content">
                         <h4 className="title">
-                          <a href="/login">NR 06 EPI</a>
+                          <a href="https://treinarsgi-plataforma.netlify.app">NR 06 EPI</a>
                         </h4>
                         <div className="courses-meta">
                           <span>
@@ -169,7 +169,7 @@ class ListaTreinamentos extends React.Component {
                   <div className="col-lg-4 col-md-6">
                   <div className="single-courses">
                       <div className="courses-images">
-                        <a href="/login">
+                        <a href="https://treinarsgi-plataforma.netlify.app">
                           <img
                             src="assets/images/brigada.jpg"
                             alt="Courses"
@@ -178,7 +178,7 @@ class ListaTreinamentos extends React.Component {
                       </div>
                       <div className="courses-content">
                         <h4 className="title">
-                          <a href="/login">Brigada de Incêndio</a>
+                          <a href="https://treinarsgi-plataforma.netlify.app">Brigada de Incêndio</a>
                         </h4>
                         <div className="courses-meta">
                           <span>
@@ -194,7 +194,7 @@ class ListaTreinamentos extends React.Component {
                     <div className="col-lg-4 col-md-6">
                   <div className="single-courses">
                       <div className="courses-images">
-                        <a href="/login">
+                        <a href="https://treinarsgi-plataforma.netlify.app">
                           <img
                             src="assets/images/foodDefense.jpg"
                             alt="Courses"
@@ -203,7 +203,7 @@ class ListaTreinamentos extends React.Component {
                       </div>
                       <div className="courses-content">
                         <h4 className="title">
-                          <a href="/login">Food Defense</a>
+                          <a href="https://treinarsgi-plataforma.netlify.app">Food Defense</a>
                         </h4>
                         <div className="courses-meta">
                           <span>

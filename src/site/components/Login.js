@@ -5,7 +5,6 @@ import CryptoJS from 'crypto-js';
 import { useNavigate } from 'react-router-dom';
 
   export default function Login({ history }) {
-
     const [email, setEmail] = useState('');
     const [pwd, setPwd] = useState('');
     const [loading, setLoading] = useState("");
@@ -49,12 +48,13 @@ import { useNavigate } from 'react-router-dom';
           return;
       });    
     };
-
+ 
     useEffect(() => {
-      if(localStorage.getItem('sgiuserid') != null){
-        navigate('/dashcliente');
-        return;
-      }
+      window.location.href='https://treinarsgi-plataforma.netlify.app';
+      // if(localStorage.getItem('sgiuserid') != null){
+      //   navigate('/dashcliente');
+      //   return;
+      // }
     }, []);
 
       return (
