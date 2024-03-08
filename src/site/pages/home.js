@@ -48,9 +48,8 @@ export default function Home() {
           {/* Slider Content Start */}
           <div className="slider-content">
             <h4 className="sub-title">Revolucione seu sistema de Gestão</h4>
-            <h2 className="main-title">
-              Escola de Treinamentos Corporativa, 24 horas para treinar e desenvolver sua equipe
-              
+            <h2 className="main-title" style={{fontSize:35}}>
+              A sua escola corporativa de treinamentos online. Flexibilidade para sua equipe, resultado para sua empresa
             </h2>
             {/* <p>It has survived not only five centuries but also the leap into electronic typesetting.</p> */}
             {/* <a class="btn btn-primary btn-hover-dark" href="#">Start A Course</a> */}
