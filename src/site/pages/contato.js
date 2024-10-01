@@ -75,7 +75,7 @@ export default function Contato() {
               </div>
               <div className="info-content">
                 <h6 className="title">E-mail</h6>
-                <p><a href="mailto:edule100@gmail.com">contato@treinarsgi.com.br</a></p>
+                <p><a href="mailto:treinarsgi@wcqi.com.br">treinarsgi@wcqi.com.br</a></p>
               </div>
             </div>
             {/* Single Contact Info End */}

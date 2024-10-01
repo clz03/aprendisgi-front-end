@@ -24,7 +24,7 @@ export default function MenuMobile(props) {
             </p>
             <p>
               <i className="flaticon-email" />{" "}
-              <a href="mailto:address@gmail.com">contato@treinarsgi.com.br</a>
+              <a href="mailto:treinarsgi@wcqi.com.br">treinarsgi@wcqi.com.br</a>
             </p>
           </div>
 

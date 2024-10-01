@@ -27,8 +27,8 @@ class Footer extends React.Component {
                       <p>
                         {" "}
                         <i className="flaticon-email" />{" "}
-                        <a href="mailto:contato@treinarsgi.com.br">
-                          contato@treinarsgi.com.br
+                        <a href="mailto:treinarsgi@wcqi.com.br">
+                          treinarsgi@wcqi.com.br
                         </a>{" "}
                       </p>
                     </li>
